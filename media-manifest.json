@@ -1,0 +1,42 @@
+[
+  {
+    "asset": "world",
+    "bytes": 2994084,
+    "source": "video demo/knight_alien_ringworld.mp4"
+  },
+  {
+    "asset": "language",
+    "bytes": 3487043,
+    "source": "video demo/knight_event_day2night.mp4"
+  },
+  {
+    "asset": "reference",
+    "bytes": 4542266,
+    "source": "video demo/03_ref2vid_iron_knight_contrast_v2_hq/iron_knight_contrast_04_anime_neon_metropolis/generated_hq_steps_010.mp4"
+  },
+  {
+    "asset": "desert",
+    "bytes": 3953976,
+    "source": "video demo/knight_desert_temple.mp4"
+  },
+  {
+    "asset": "ink",
+    "bytes": 4978882,
+    "source": "video demo/knight_ink.mp4"
+  },
+  {
+    "asset": "pat",
+    "bytes": 1768755,
+    "source": "video demo/doll_cow_pat.mp4"
+  },
+  {
+    "asset": "lift",
+    "bytes": 1941462,
+    "source": "video demo/doll_cow_lift.mp4"
+  },
+  {
+    "asset": "drag",
+    "bytes": 2564868,
+    "source": "video demo/doll_cow_drag.mp4"
+  }
+]

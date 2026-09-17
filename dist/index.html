@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ENUMA — Worlds, in your hands.</title>
+  <meta name="description" content="ENUMA unifies camera, language, and visual controls for interactive world modeling. Explore selected research demos.">
+  <meta name="theme-color" content="#07090b">
+  <link rel="icon" href="assets/enuma_favicon_64.png"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#capabilities">Skip to capabilities</a>
+  <header class="header"><a class="brand" href="#" aria-label="ENUMA home"><img src="assets/enuma_logo_white.svg" alt="ENUMA" width="165" height="33"></a><nav aria-label="Main navigation"><a href="#capabilities">Capabilities</a><a href="#research">Research</a></nav><span class="concept-label">RESEARCH PREVIEW</span></header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <video class="hero-video" id="hero-video" poster="assets/world.jpg" autoplay muted loop playsinline preload="metadata"><source src="assets/world.mp4" type="video/mp4"></video>
+      <div class="hero-shade"></div><div class="hero-rule"></div>
+      <div class="hero-content"><p class="eyebrow">INTRODUCING ENUMA <span>/</span> INTERACTIVE WORLD MODEL</p><h1 id="hero-title">Worlds,<br>in your <em>hands.</em></h1><p class="hero-description">Move the camera. Describe a change. Bring a reference.<br> One model. A world of possibilities.</p><a class="button light" href="#capabilities">Explore the capabilities <span aria-hidden="true">↗</span></a></div>
+      <div class="hero-bottom"><span>CAMERA × LANGUAGE × VISION</span><button id="hero-pause" aria-label="Pause background video">Ⅱ <span>Pause motion</span></button><span class="recorded">PRE-RECORDED MODEL OUTPUT</span></div>
+    </section>
+    <section class="intro section" id="capabilities">
+      <p class="eyebrow">01 / A UNIFIED INTERFACE</p>
+      <div class="section-heading"><h2>A world that follows<br>your imagination.</h2><p>ENUMA brings camera trajectories, language events, and visual references into a single interactive world model.</p></div>
+      <div class="capability-tabs" role="tablist" aria-label="Explore model controls">
+        <button role="tab" aria-selected="true" aria-controls="demo-panel" id="tab-camera" data-mode="camera"><span>01</span> Camera <span class="tab-plus" aria-hidden="true">↗</span></button>
+        <button role="tab" aria-selected="false" aria-controls="demo-panel" id="tab-language" data-mode="language" tabindex="-1"><span>02</span> Language <span class="tab-plus" aria-hidden="true">↗</span></button>
+        <button role="tab" aria-selected="false" aria-controls="demo-panel" id="tab-reference" data-mode="reference" tabindex="-1"><span>03</span> Visual reference <span class="tab-plus" aria-hidden="true">↗</span></button>
+      </div>
+      <div class="demo" id="demo-panel" role="tabpanel" aria-labelledby="tab-camera" tabindex="0">
+        <div class="demo-visual"><video id="demo-video" controls muted loop playsinline preload="none" poster="assets/world.jpg" aria-label="Camera control research demonstration"><source src="assets/world.mp4" type="video/mp4"></video><span class="video-label">ENUMA / MODEL OUTPUT</span></div>
+        <div class="demo-caption"><div><span class="small-label" id="mode-label">CAMERA TRAJECTORY</span><h3 id="mode-title">Choose where the world takes you.</h3><p id="mode-description">Camera trajectories guide viewpoint motion through the generated world. Follow the character into a vast ringworld.</p></div><div class="control-preview" id="control-preview"><span class="small-label">SELECTED DEMONSTRATION</span><div class="control-value"><span class="control-icon" aria-hidden="true">↗</span> Forward exploration</div><span class="control-detail">Ringworld / camera-conditioned rollout</span></div></div>
+      </div>
+      <p class="media-note">Pre-recorded research outputs. Selecting a control changes the sample; this page does not run live inference.</p>
+    </section>
+    <section class="worlds section" id="worlds">
+      <p class="eyebrow">02 / REIMAGINE THE SETTING</p><div class="section-heading"><h2>One character.<br>Entirely different worlds.</h2><p>From monumental architecture to an ink-painted landscape, explore the visual range of reference-conditioned generation.</p></div>
+      <div class="world-grid">
+        <button class="world-card" data-world="world" aria-label="Play Ringworld demonstration"><div class="world-image"><img src="assets/world.jpg" alt="An armored character in a futuristic ringworld" loading="lazy" width="1248" height="720"><span class="round-play" aria-hidden="true">▶</span></div><div class="world-meta"><h3>Beyond the horizon</h3><span>01 / RINGWORLD</span></div></button>
+        <button class="world-card" data-world="desert" aria-label="Play Desert temple demonstration"><div class="world-image"><img src="assets/desert.jpg" alt="The armored character approaching a sandstone temple" loading="lazy" width="1248" height="720"><span class="round-play" aria-hidden="true">▶</span></div><div class="world-meta"><h3>A world unearthed</h3><span>02 / DESERT TEMPLE</span></div></button>
+        <button class="world-card" data-world="ink" aria-label="Play Ink landscape demonstration"><div class="world-image"><img src="assets/ink.jpg" alt="The armored character in a flowing ink-painting landscape" loading="lazy" width="1248" height="720"><span class="round-play" aria-hidden="true">▶</span></div><div class="world-meta"><h3>Reality, reinterpreted</h3><span>03 / INK LANDSCAPE</span></div></button>
+      </div>
+    </section>
+    <section class="interaction section" id="interaction">
+      <div class="interaction-copy"><p class="eyebrow">03 / SHAPE WHAT HAPPENS NEXT</p><h2>Small actions.<br>Different futures.</h2><p>Go beyond looking around. Object interactions let user intent shape what happens inside the scene.</p><div class="action-picker" aria-label="Choose an object interaction"><button class="selected" aria-pressed="true" data-action="pat">Pat</button><button aria-pressed="false" data-action="lift">Lift</button><button aria-pressed="false" data-action="drag">Drag</button></div><p class="action-caption" id="action-caption">Selected outcome: pat the cow.</p><span class="small-label">THREE PRE-RECORDED INTERACTION OUTCOMES</span></div>
+      <div class="interaction-visual"><video id="action-video" controls muted loop playsinline preload="none" poster="assets/pat.jpg" aria-label="Pat the cow research demonstration"><source src="assets/pat.mp4" type="video/mp4"></video><span class="video-label">OBJECT INTERACTION</span></div>
+    </section>
+    <section id="research" class="section research">
+      <p class="eyebrow">04 / BEHIND THE WORLDS</p><div class="section-heading"><h2>Many ways to interact.<br>One world model.</h2><p>Unified conditioning and Reference Forcing connect rich interactions with chunk-wise causal generation.</p></div>
+      <div class="research-stats"><div><span class="stat-number">3</span><p>Control modalities</p><span>Camera · Language · Visual reference</span></div><div><span class="stat-number">30<span>s</span></span><p>Causal generation, up to</p><span>Long-horizon adaptation</span></div><div><span class="stat-number">4<span> steps</span></span><p>Distilled generation</p><span>Few-step causal rollout</span></div></div>
+      <div class="method"><div class="method-heading"><span class="small-label">REFERENCE FORCING</span><p>From a bidirectional generator<br>to an interactive world.</p></div><ol class="method-flow"><li><span>01</span><h3>Unify the controls</h3><p>Dedicated conditioning for camera trajectories, language events, and visual references.</p></li><li><span>02</span><h3>Anchor the rollout</h3><p>Dynamic reference anchors and mixed forcing support chunk-wise causal generation.</p></li><li><span>03</span><h3>Distill to four steps</h3><p>Few-step distillation makes autoregressive rollout more efficient.</p></li></ol></div>
+      <details class="paper"><summary><div><span class="small-label">ENUMA / TECHNICAL REPORT</span><h3>Unifying Camera, Language, and Visual Controls<br>for Interactive World Modeling</h3></div><span class="abstract-toggle">Read abstract <span aria-hidden="true">+</span></span></summary><div class="paper-content"><p>Interactive world models are evolving beyond camera-controlled navigation toward richer forms of user interaction, yet existing systems typically support only a limited subset of control signals. We present ENUMA, a unified interactive world model that jointly supports camera trajectories, language events, and visual references. Starting from a pretrained bidirectional video generator, we introduce dedicated conditioning mechanisms for heterogeneous controls, together with an interaction-oriented data curation pipeline and multi-task reinforcement learning to improve control fidelity.</p><p>To enable autoregressive deployment, we further propose Reference Forcing, which adapts the bidirectional model to chunk-wise causal generation with dynamically updated reference anchors and mixed forcing, and subsequently distills it into a four-step generator for efficient rollout. ENUMA supports causal generation up to 30 seconds and is evaluated on established world-model benchmarks, our proposed ENUMA-Bench, and direct human preference comparisons. Our results highlight heterogeneous interaction interfaces as a promising direction toward more general and continuously controllable world models.</p><p class="authors">Zhoujie Fu · Qing Yan · Yizhi Song · Zichuan Liu · Hao Kang · Yumin Jia · Xinyao Liao · Junyi Chen · Zixin Zhu · Zhexiao Xiong · Stathi Fotiadis · Jenson Yang · Jiamin Yuan · Guosheng Lin · Xin Lu</p></div></details>
+      <div class="affiliations"><span>Nanyang Technological University</span><span>Intelligent Creation, ByteDance</span><span>Shanghai Jiao Tong University</span></div>
+    </section>
+  </main><footer><img src="assets/enuma_logo_white.svg" alt="ENUMA" width="142" height="29"><p>Interactive worlds. Unified.</p><span>RESEARCH WEBSITE CONCEPT / 2026</span></footer>
+  <dialog id="world-dialog" aria-labelledby="world-dialog-title"><div class="dialog-top"><h2 id="world-dialog-title">Beyond the horizon</h2><button id="close-dialog" aria-label="Close video">×</button></div><video id="world-video" controls muted loop playsinline preload="none"></video><p>ENUMA · Pre-recorded model output</p></dialog>
+  <script src="app.js"></script>
+</body>
+</html>

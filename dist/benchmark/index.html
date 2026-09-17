@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ENUMA-Bench — Evaluating interactive worlds</title>
+  <meta name="description" content="ENUMA-Bench evaluates six categories of interactive world modeling, from camera navigation to visual-reference events. Leaderboard and gallery preview.">
+  <meta name="theme-color" content="#07090b">
+  <link rel="icon" href="../assets/enuma_favicon_64.png"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="benchmark.css">
+</head>
+<body class="benchmark-page">
+  <a class="skip" href="#leaderboard">Skip to leaderboard</a>
+  <header class="header"><a class="brand" href="../" aria-label="ENUMA home"><img src="../assets/enuma_logo_white.svg" alt="ENUMA" width="165" height="33"></a><nav aria-label="Main navigation"><a href="../#capabilities">Capabilities</a><a href="../#research">Research</a><a href="./" aria-current="page">Benchmark</a></nav><span class="concept-label">RESEARCH PREVIEW</span></header>
+  <main class="bench-main">
+    <div class="bench-intro"><div><p class="eyebrow">ENUMA / EVALUATION SUITE</p><h1>ENUMA<span>-Bench</span></h1><p>How well does a world follow your intent?</p></div><div class="bench-overview"><span class="small-label">SIX INTERACTION CATEGORIES</span><p>Evaluating geometric, semantic, and appearance-level control in interactive world models.</p><nav aria-label="Benchmark sections"><a href="#leaderboard">Leaderboard <span aria-hidden="true">↓</span></a><a href="#gallery">Gallery <span aria-hidden="true">↓</span></a><a href="#protocol">Protocol <span aria-hidden="true">↓</span></a></nav></div></div>
+    <section id="leaderboard" class="bench-section" aria-labelledby="leaderboard-title">
+      <div class="bench-section-head"><div><span class="small-label">01 / QUANTITATIVE EVALUATION</span><h2 id="leaderboard-title">Leaderboard</h2></div><span class="release-label">Results forthcoming</span></div>
+      <div class="leaderboard-toolbar"><div class="metric-views" aria-label="Leaderboard metric groups"><button data-view="all" aria-pressed="true">All metrics</button><button data-view="interactive" aria-pressed="false">Camera &amp; language</button><button data-view="reference" aria-pressed="false">Visual references</button></div><span class="score-scale">0–100 · Higher is better</span></div>
+      <div class="table-scroll" role="region" aria-label="Leaderboard table, scroll horizontally for all metrics" tabindex="0"><table id="leaderboard-table"><caption class="sr-only">ENUMA-Bench evaluation methods and metrics. All scores are pending; rows are unranked.</caption><thead id="leaderboard-head"></thead><tbody id="leaderboard-body"></tbody></table></div>
+      <div class="table-note"><p id="table-status" aria-live="polite">Unranked preview. Methods follow the draft report; scores have not been released.</p><span>— <span class="pending-key">Not yet reported</span></span></div>
+      <noscript><p class="no-script">The leaderboard preview requires JavaScript. All scores are currently pending.</p></noscript>
+    </section>
+    <section id="gallery" class="bench-section" aria-labelledby="gallery-title">
+      <div class="bench-section-head"><div><span class="small-label">02 / QUALITATIVE EVALUATION</span><h2 id="gallery-title">See the interaction.</h2></div><p>Explore the task. Inspect the outcome.</p></div>
+      <div class="gallery-notice"><span class="small-label">GALLERY LAYOUT PREVIEW</span><p>Illustrative ENUMA demos are shown below. Official benchmark cases and matched model comparisons are forthcoming.</p></div>
+      <div class="gallery-toolbar"><div id="gallery-filters" class="gallery-filters" aria-label="Filter gallery by interaction category"></div><span id="gallery-count" role="status"></span></div>
+      <div id="case-grid" class="case-grid"></div>
+      <div id="gallery-empty" class="gallery-empty" hidden><span class="empty-mark" aria-hidden="true">+</span><h3>Examples are on the way.</h3><p id="empty-description">Benchmark examples for this category will appear here.</p><button id="reset-gallery">View available previews <span aria-hidden="true">↗</span></button></div>
+    </section>
+    <section id="protocol" class="bench-section protocol" aria-labelledby="protocol-title">
+      <div class="bench-section-head"><div><span class="small-label">03 / WHAT WE EVALUATE</span><h2 id="protocol-title">A broader test of control.</h2></div><p>Six categories, grounded in the ENUMA technical report.</p></div>
+      <div class="category-grid" id="category-grid"></div>
+      <div class="protocol-note"><p><strong>Evaluation protocol</strong><br>Scores use a 0–100 scale. Dataset counts, the final scoring procedure, and release details will accompany the benchmark.</p><a href="../#research">About the research <span aria-hidden="true">↗</span></a></div>
+    </section>
+  </main>
+  <footer><a href="../" aria-label="Back to ENUMA"><img src="../assets/enuma_logo_white.svg" alt="ENUMA" width="142" height="29"></a><p>Interactive worlds. Measurable control.</p><span>ENUMA-BENCH / PREVIEW</span></footer>
+  <dialog id="case-dialog" aria-labelledby="case-title"><div class="dialog-top"><div><span id="case-category" class="small-label"></span><h2 id="case-title"></h2></div><button id="close-case" aria-label="Close example">×</button></div><p class="comparison-notice">Comparison layout preview · This is an illustrative demo, not an official benchmark result.</p><div class="comparison-grid"><div class="comparison-pane"><div class="pane-label"><strong>ENUMA</strong><span>Illustrative demo</span></div><video id="case-video" controls muted playsinline loop preload="none"></video></div><div class="comparison-pane"><div class="pane-label"><strong>Baseline</strong><span>Awaiting output</span></div><div class="baseline-empty"><span aria-hidden="true">↔</span><h3>A matched comparison.</h3><p>Baseline outputs under the same conditions will appear here when available.</p></div></div></div><p id="case-description" class="case-description"></p><p id="case-media-error" class="media-error" role="status" hidden>The video could not be loaded. Close this example and open it again to retry.</p></dialog>
+  <script src="data.js"></script><script src="benchmark.js"></script>
+</body>
+</html>

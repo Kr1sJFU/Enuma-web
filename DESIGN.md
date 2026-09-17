@@ -32,3 +32,17 @@
 - `dist/assets/`：网页副本。视频保留原分辨率、帧率、帧数与完整时长，仅重新压缩并优化在线播放起始加载。
 
 参考输入来自 `iron_knight_contrast_04_anime_neon_metropolis` 的同名样例，未使用额外生成图片冒充 ENUMA 输出。暂未放入论文 PDF 下载，避免把设计稿中的报告入口误认为已经正式发布。
+
+## 第二版：论文标题与 Benchmark 分页面
+
+首页主标语下方加入完整标题 **ENUMA: Unifying Camera, Language, and Visual Controls for Interactive World Modeling**，作为可点击的论文信息。点击跳转到研究区并展开摘要。顶部导航和研究区均可进入独立的 `/benchmark/` 页面。
+
+Benchmark 延续主站品牌，但采用更紧凑的研究页面布局：
+
+- **Leaderboard**：依据报告 Section 5.3、Table 5 显示六个维度和八个方法。支持按指标组查看；分数尚未报告，全部以破折号显示，当前不作排名。真实分数接入后，指标列支持降序排序，缺失值排在最后。
+- **Gallery**：六个任务分类筛选、四个现有视频布局示例、缺少素材分类的空状态。点击案例打开双栏比较布局：ENUMA 示例视频和等待配对结果的 baseline 区域。
+- **Protocol**：说明六类任务测量的内容。评测案例数、最终评分流程和发布信息待确认。
+
+Gallery 的现有素材明确标注为 illustrative demo，不能作为正式 benchmark 测试结果或与其他模型的匹配比较。
+
+数据入口为 `dist/benchmark/data.js`：维护 categories、models、examples。最终数值使用 0–100 的数字，未报告值使用 `null` 或缺省字段；不能以 0 代替缺失值。最终 benchmark 素材、baseline 结果和具体 section 由团队后续提供，再替换这版布局示例。

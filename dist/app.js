@@ -28,3 +28,4 @@ const allVideos=[...document.querySelectorAll('video')];
 allVideos.forEach(video=>{video.addEventListener('play',()=>{if(video!==heroVideo)allVideos.filter(v=>v!==video).forEach(v=>v.pause());});video.addEventListener('error',()=>{let note=video.parentElement.querySelector('.media-error');if(!note){note=document.createElement('p');note.className='media-error';note.setAttribute('role','status');note.textContent='This video could not be loaded. Please reload the page to try again.';video.insertAdjacentElement('afterend',note);}});});
 const visibilityObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(!entry.isIntersecting)entry.target.pause();}),{threshold:.05});allVideos.forEach(video=>visibilityObserver.observe(video));
 document.addEventListener('visibilitychange',()=>{if(document.hidden)allVideos.forEach(v=>v.pause());});
+document.querySelector('.hero-paper').addEventListener('click',()=>{document.querySelector('.paper').open=true;});

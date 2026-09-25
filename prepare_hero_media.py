@@ -11,7 +11,7 @@ from pathlib import Path
 
 SITE = Path(__file__).resolve().parent
 WORKSPACE = SITE.parent
-ASSETS = SITE / "dist/assets"
+ASSETS = SITE / "assets"
 EDIT = WORKSPACE / "video demo/edit/hero_site_sequence"
 FFMPEG = Path("/Users/bytedance/Library/Python/3.9/lib/python/site-packages/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1")
 if not FFMPEG.exists():

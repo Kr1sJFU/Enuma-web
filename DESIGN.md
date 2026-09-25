@@ -4,13 +4,13 @@
 
 参考 [EchoWM](https://echo-team-joy-future-academy-jd.github.io/Echo-1.5-Page/wm/) 按能力组织的视频案例，以及 [Evoke](https://evoke-world.github.io/Evoke/) 的全屏动态首屏与大规模展示区。ENUMA 首页已调整为：骑士视频序列首屏 → 完整 Demo 视频 → 六个交互案例 → Ref2Vid / Text Event / Ref Event / Interaction / Embodied 五个独立章节 → 精简论文信息与 Benchmark 入口。交互案例区在桌面端排成两排、每排三个；Obsidian Portal 和 Drawbridge / Dragon 是四幕推进，Fireball / Brazier、Car Wash 和 Residential Street 是三幕推进；Plush Cow 是共享开场后选择 Pat / Lift / Drag 三条分支。具体视觉和文案保持 ENUMA 自己的风格，不复制同行品牌元素或性能叙述。
 
-新增本地媒体通过 `prepare_media.py`、`prepare_hero_media.py`、`prepare_feature_media.py` 和 `prepare_capability_media.py` 从现有真实输出转码；六个互动页面均在 `dist/interactive/`。网站依旧只在本地维护，不执行发布。
+新增本地媒体通过 `prepare_media.py`、`prepare_hero_media.py`、`prepare_feature_media.py` 和 `prepare_capability_media.py` 从现有真实输出转码；六个互动页面均在 `interactive/`。
 
 面向国际研究社区，以英文呈现。依据 `Unified_WM__tech_report_.pdf` 的摘要、Figure 1 和 Reference Forcing 章节组织内容，使用现有 ENUMA 标志与真实视频。
 
 ## 发布约定（用户已确认）
 
-最终通过 GitHub Pages（github.io）发布。当前阶段只做本地设计、开发与预览，不处理线上发布。已准备手动触发的 `.github/workflows/pages.yml`，将 `dist/` 作为静态网站根目录上传；`verify_github_pages.py` 用于发布前检查。除非用户明确要求，不部署、不重试 Sites 发布，也不推送到 Sites 托管仓库。此前的 Sites 配置与发布记录仅作历史记录，不代表继续使用该托管服务。
+通过 GitHub Pages 发布：仓库根目录即网站（与 iMontage-web 相同），Pages 设置为 Deploy from a branch → `main` / `(root)`，每次推送到 `main` 自动更新 https://kr1sjfu.github.io/Enuma-web/ 。推送前运行 `verify_github_pages.py`。旧的 Sites 配置（`.openai/`）仅作历史记录。
 
 ## 视觉与叙事
 
@@ -35,11 +35,11 @@
 
 ## 文件与维护
 
-- `dist/index.html`：页面结构与文案。
-- `dist/styles.css`：主题及响应式布局。
-- `dist/app.js`：首屏序列、Demo、能力章节视频与播放控制。
+- `index.html`：页面结构与文案。
+- `styles.css`：主题及响应式布局。
+- `app.js`：首屏序列、Demo、能力章节视频与播放控制。
 - `media-manifest.json`：网页媒体与原始素材的映射。
-- `dist/assets/`：网页副本。较长的 Demo 和部分首屏素材缩至网页适用分辨率；原始素材不修改。
+- `assets/`：网页副本。较长的 Demo 和部分首屏素材缩至网页适用分辨率；原始素材不修改。
 
 参考输入来自 `iron_knight_contrast_04_anime_neon_metropolis` 的同名样例，未使用额外生成图片冒充 ENUMA 输出。暂未放入论文 PDF 下载，避免把设计稿中的报告入口误认为已经正式发布。
 
@@ -55,4 +55,4 @@ Benchmark 延续主站品牌，但采用更紧凑的研究页面布局：
 
 Gallery 的现有素材明确标注为 illustrative demo，不能作为正式 benchmark 测试结果或与其他模型的匹配比较。
 
-数据入口为 `dist/benchmark/data.js`：维护 categories、models、examples。最终数值使用 0–100 的数字，未报告值使用 `null` 或缺省字段；不能以 0 代替缺失值。最终 benchmark 素材、baseline 结果和具体 section 由团队后续提供，再替换这版布局示例。
+数据入口为 `benchmark/data.js`：维护 categories、models、examples。最终数值使用 0–100 的数字，未报告值使用 `null` 或缺省字段；不能以 0 代替缺失值。最终 benchmark 素材、baseline 结果和具体 section 由团队后续提供，再替换这版布局示例。

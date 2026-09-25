@@ -12,7 +12,7 @@ from PIL import Image, ImageOps
 
 SITE = Path(__file__).resolve().parent
 WORKSPACE = SITE.parent
-ASSETS = SITE / "dist/assets"
+ASSETS = SITE / "assets"
 FFMPEG = Path("/Users/bytedance/Library/Python/3.9/lib/python/site-packages/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1")
 if not FFMPEG.exists():
     FFMPEG = Path(shutil.which("ffmpeg") or "ffmpeg")

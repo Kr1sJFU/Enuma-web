@@ -1,17 +1,18 @@
-"""Check that dist/ can be served unchanged at a GitHub Pages project URL."""
+"""Check that the repository root can be served unchanged as a GitHub Pages project site."""
 
 from __future__ import annotations
 
 import posixpath
 import re
 import struct
+import subprocess
 from html.parser import HTMLParser
 from pathlib import Path, PurePosixPath
 from urllib.parse import unquote, urlsplit
 
 
 ROOT = Path(__file__).resolve().parent
-SITE = ROOT / "dist"
+SITE = ROOT
 SITE_LIMIT = 1_000_000_000
 FILE_LIMIT = 100_000_000
 
@@ -86,7 +87,11 @@ def verify_reference(page: Path, reference: str) -> None:
 
 def main() -> None:
     assert (SITE / "index.html").is_file(), "Pages artifact needs index.html at its root"
-    files = [path for path in SITE.rglob("*") if path.is_file()]
+    # Branch deploys publish exactly the committed tree.
+    tracked = subprocess.run(["git", "ls-files", "-z"], cwd=SITE, check=True,
+                             capture_output=True, text=True).stdout.split("\0")
+    files = [SITE / name for name in tracked if name]
+    assert (SITE / ".nojekyll") in files, "root .nojekyll keeps GitHub from running Jekyll"
     assert files and not any(path.is_symlink() or path.stat().st_nlink > 1 for path in files), \
         "Pages artifact must not contain symbolic or hard links"
     total = sum(path.stat().st_size for path in files)
@@ -98,7 +103,7 @@ def main() -> None:
     assert not non_progressive, f"MP4 metadata must precede video data: {non_progressive}"
 
     cases = 0
-    for page in SITE.rglob("*.html"):
+    for page in (path for path in files if path.suffix == ".html"):
         parser = References()
         parser.feed(page.read_text())
         for reference in parser.values:

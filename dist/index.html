@@ -7,6 +7,7 @@
   <meta name="theme-color" content="#07090b">
   <title>ENUMA — Enter the world.</title>
   <link rel="icon" href="assets/enuma_favicon_64.png">
+  <link rel="preload" as="image" href="assets/world.jpg" fetchpriority="high">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="home.css">
 </head>
@@ -24,8 +25,8 @@
   </header>
   <main id="top">
     <section class="home-hero" aria-labelledby="hero-title">
-      <video id="hero-video" class="home-hero-video is-active" src="assets/world.mp4" muted playsinline preload="auto" poster="assets/world.jpg" aria-hidden="true"></video>
-      <video id="hero-video-next" class="home-hero-video" muted playsinline preload="auto" aria-hidden="true"></video>
+      <video id="hero-video" class="home-hero-video is-active" muted playsinline preload="none" poster="assets/world.jpg" aria-hidden="true"></video>
+      <video id="hero-video-next" class="home-hero-video" muted playsinline preload="none" aria-hidden="true"></video>
       <img id="hero-final-frame" class="home-hero-final-frame" src="assets/hero-teaser-mosaic.jpg" alt="" aria-hidden="true">
       <div class="home-hero-shade"></div>
       <div class="home-hero-content">
@@ -61,38 +62,38 @@
       </div>
       <div class="journey-grid">
         <a class="journey-card" href="interactive/obsidian-portal/index.html" aria-label="Enter Obsidian Portal interactive demo">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/portal-preview.jpg" data-src="assets/portal-preview.mp4" aria-hidden="true"></video>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/portal-preview.jpg" data-src="assets/portal-preview.mp4" aria-hidden="true"></video>
           <span class="journey-shade"></span>
           <span class="journey-top">01 <span>FOUR TURNS</span></span>
           <span class="journey-bottom"><strong>Obsidian Portal</strong><span>ENTER ↗</span></span>
         </a>
         <a class="journey-card" href="interactive/drawbridge-dragon/index.html" aria-label="Enter Drawbridge and Dragon interactive demo">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/dragon-preview.jpg" data-src="assets/dragon-preview.mp4" aria-hidden="true"></video>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/dragon-preview.jpg" data-src="assets/dragon-preview.mp4" aria-hidden="true"></video>
           <span class="journey-shade"></span>
           <span class="journey-top">02 <span>FOUR TURNS</span></span>
           <span class="journey-bottom"><strong>Drawbridge / Dragon</strong><span>ENTER ↗</span></span>
         </a>
         <a class="journey-card journey-card-branch" href="interactive/doll-cow/index.html" aria-label="Enter Plush Cow three-branch interactive demo">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/cow-event.jpg" data-src="assets/cow-event.mp4" aria-hidden="true"></video>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/cow-event.jpg" data-src="assets/cow-event.mp4" aria-hidden="true"></video>
           <span class="journey-shade"></span>
           <span class="journey-top">03 <span>THREE BRANCHES</span></span>
           <span class="journey-bottom"><strong>Plush Cow</strong><span>ENTER ↗</span></span>
           <span class="journey-branch-actions">PAT <i>/</i> LIFT <i>/</i> DRAG</span>
         </a>
         <a class="journey-card" href="interactive/magic-fireball-brazier/index.html" aria-label="Enter Fireball and Brazier three-turn interactive demo">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/magic-fireball-preview.jpg" data-src="assets/magic-fireball-preview.mp4" aria-hidden="true"></video>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/magic-fireball-preview.jpg" data-src="assets/magic-fireball-preview.mp4" aria-hidden="true"></video>
           <span class="journey-shade"></span>
           <span class="journey-top">04 <span>THREE TURNS</span></span>
           <span class="journey-bottom"><strong>Fireball / Brazier</strong><span>ENTER ↗</span></span>
         </a>
         <a class="journey-card" href="interactive/car-wash/index.html" aria-label="Enter Car Wash three-turn interactive demo">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/car-wash-preview.jpg" data-src="assets/car-wash-preview.mp4" aria-hidden="true"></video>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/car-wash-preview.jpg" data-src="assets/car-wash-preview.mp4" aria-hidden="true"></video>
           <span class="journey-shade"></span>
           <span class="journey-top">05 <span>THREE TURNS</span></span>
           <span class="journey-bottom"><strong>Car Wash</strong><span>ENTER ↗</span></span>
         </a>
         <a class="journey-card" href="interactive/residential-street/index.html" aria-label="Enter Residential Street three-turn interactive demo">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/street-preview.jpg" data-src="assets/street-preview.mp4" aria-hidden="true"></video>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/street-preview.jpg" data-src="assets/street-preview.mp4" aria-hidden="true"></video>
           <span class="journey-shade"></span>
           <span class="journey-top">06 <span>THREE TURNS</span></span>
           <span class="journey-bottom"><strong>Residential Street</strong><span>ENTER ↗</span></span>
@@ -114,7 +115,7 @@
       <div class="carousel-viewport" id="carousel-ref2vid-long" role="group" aria-roledescription="carousel" aria-label="30-second Ref2Vid cases" tabindex="0">
         <div class="sample-card sample-card-with-refs">
           <button class="sample-play" type="button" data-video="ref2vid-0264" data-title="Azure Wyvern" aria-label="Play Azure Wyvern Ref2Vid output, 30 seconds">
-            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-0264.jpg" data-src="assets/ref2vid-0264-preview.mp4" aria-hidden="true"></video>
+            <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/ref2vid-0264.jpg" data-src="assets/ref2vid-0264-preview.mp4" aria-hidden="true"></video>
             <span class="sample-caption"><small>30S ROLLOUT</small><strong>Azure Wyvern</strong><b aria-hidden="true">↗</b></span>
           </button>
           <div class="reference-inputs"><span>CHAR / SCENE</span>
@@ -124,7 +125,7 @@
         </div>
         <div class="sample-card sample-card-with-refs">
           <button class="sample-play" type="button" data-video="ref2vid-0412" data-title="Alpine Ride" aria-label="Play Alpine Ride Ref2Vid output, 30 seconds">
-            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-0412.jpg" data-src="assets/ref2vid-0412-preview.mp4" aria-hidden="true"></video>
+            <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/ref2vid-0412.jpg" data-src="assets/ref2vid-0412-preview.mp4" aria-hidden="true"></video>
             <span class="sample-caption"><small>30S ROLLOUT</small><strong>Alpine Ride</strong><b aria-hidden="true">↗</b></span>
           </button>
           <div class="reference-inputs"><span>CHAR / SCENE</span>
@@ -134,7 +135,7 @@
         </div>
         <div class="sample-card sample-card-with-refs">
           <button class="sample-play" type="button" data-video="ref2vid-0256" data-title="Lunar Rescue" aria-label="Play Lunar Rescue Ref2Vid output, 30 seconds">
-            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-0256.jpg" data-src="assets/ref2vid-0256-preview.mp4" aria-hidden="true"></video>
+            <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/ref2vid-0256.jpg" data-src="assets/ref2vid-0256-preview.mp4" aria-hidden="true"></video>
             <span class="sample-caption"><small>30S ROLLOUT</small><strong>Lunar Rescue</strong><b aria-hidden="true">↗</b></span>
           </button>
           <div class="reference-inputs"><span>CHAR / SCENE</span>
@@ -144,7 +145,7 @@
         </div>
         <div class="sample-card sample-card-with-refs">
           <button class="sample-play" type="button" data-video="ref2vid-0243" data-title="Bison / Savanna" aria-label="Play Bison / Savanna Ref2Vid output, 30 seconds">
-            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-0243.jpg" data-src="assets/ref2vid-0243-preview.mp4" aria-hidden="true"></video>
+            <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/ref2vid-0243.jpg" data-src="assets/ref2vid-0243-preview.mp4" aria-hidden="true"></video>
             <span class="sample-caption"><small>30S ROLLOUT</small><strong>Bison / Savanna</strong><b aria-hidden="true">↗</b></span>
           </button>
           <div class="reference-inputs"><span>CHAR / SCENE</span>
@@ -154,7 +155,7 @@
         </div>
         <div class="sample-card sample-card-with-refs">
           <button class="sample-play" type="button" data-video="ref2vid-0825" data-title="Crystal Desert Flight" aria-label="Play Crystal Desert Flight Ref2Vid output, 30 seconds">
-            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-0825.jpg" data-src="assets/ref2vid-0825-preview.mp4" aria-hidden="true"></video>
+            <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/ref2vid-0825.jpg" data-src="assets/ref2vid-0825-preview.mp4" aria-hidden="true"></video>
             <span class="sample-caption"><small>30S ROLLOUT</small><strong>Crystal Desert Flight</strong><b aria-hidden="true">↗</b></span>
           </button>
           <div class="reference-inputs"><span>CHAR / SCENE</span>
@@ -164,7 +165,7 @@
         </div>
         <div class="sample-card sample-card-with-refs">
           <button class="sample-play" type="button" data-video="ref2vid-0679" data-title="Copper Stag" aria-label="Play Copper Stag Ref2Vid output, 30 seconds">
-            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-0679.jpg" data-src="assets/ref2vid-0679-preview.mp4" aria-hidden="true"></video>
+            <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/ref2vid-0679.jpg" data-src="assets/ref2vid-0679-preview.mp4" aria-hidden="true"></video>
             <span class="sample-caption"><small>30S ROLLOUT</small><strong>Copper Stag</strong><b aria-hidden="true">↗</b></span>
           </button>
           <div class="reference-inputs"><span>CHAR / SCENE</span>
@@ -174,7 +175,7 @@
         </div>
         <div class="sample-card sample-card-with-refs">
           <button class="sample-play" type="button" data-video="ref2vid-0757" data-title="Coastal Cartographer" aria-label="Play Coastal Cartographer Ref2Vid output, 30 seconds">
-            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-0757.jpg" data-src="assets/ref2vid-0757-preview.mp4" aria-hidden="true"></video>
+            <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/ref2vid-0757.jpg" data-src="assets/ref2vid-0757-preview.mp4" aria-hidden="true"></video>
             <span class="sample-caption"><small>30S ROLLOUT</small><strong>Coastal Cartographer</strong><b aria-hidden="true">↗</b></span>
           </button>
           <div class="reference-inputs"><span>CHAR / SCENE</span>
@@ -184,7 +185,7 @@
         </div>
         <div class="sample-card sample-card-with-refs">
           <button class="sample-play" type="button" data-video="ref2vid-0988" data-title="Floating Islands" aria-label="Play Floating Islands Ref2Vid output, 30 seconds">
-            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-0988.jpg" data-src="assets/ref2vid-0988-preview.mp4" aria-hidden="true"></video>
+            <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/ref2vid-0988.jpg" data-src="assets/ref2vid-0988-preview.mp4" aria-hidden="true"></video>
             <span class="sample-caption"><small>30S ROLLOUT</small><strong>Floating Islands</strong><b aria-hidden="true">↗</b></span>
           </button>
           <div class="reference-inputs"><span>CHAR / SCENE</span>
@@ -205,7 +206,7 @@
       <div class="carousel-viewport" id="carousel-ref2vid-short" role="group" aria-roledescription="carousel" aria-label="8-second Ref2Vid cases" tabindex="0">
         <div class="sample-card sample-card-with-refs">
           <button class="sample-play" type="button" data-video="ref2vid-01" data-title="Crystal Frontier" aria-label="Play Crystal Frontier Ref2Vid output, 8 seconds">
-            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-01.jpg" data-src="assets/ref2vid-01.mp4" aria-hidden="true"></video>
+            <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/ref2vid-01.jpg" data-src="assets/ref2vid-01.mp4" aria-hidden="true"></video>
             <span class="sample-caption"><small>8S WORLD</small><strong>Crystal Frontier</strong><b aria-hidden="true">↗</b></span>
           </button>
           <div class="reference-inputs"><span>CHAR / SCENE</span>
@@ -215,7 +216,7 @@
         </div>
         <div class="sample-card sample-card-with-refs">
           <button class="sample-play" type="button" data-video="ref2vid-02" data-title="Forest Sentinel" aria-label="Play Forest Sentinel Ref2Vid output, 8 seconds">
-            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-02.jpg" data-src="assets/ref2vid-02.mp4" aria-hidden="true"></video>
+            <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/ref2vid-02.jpg" data-src="assets/ref2vid-02.mp4" aria-hidden="true"></video>
             <span class="sample-caption"><small>8S WORLD</small><strong>Forest Sentinel</strong><b aria-hidden="true">↗</b></span>
           </button>
           <div class="reference-inputs"><span>CHAR / SCENE</span>
@@ -225,7 +226,7 @@
         </div>
         <div class="sample-card sample-card-with-refs">
           <button class="sample-play" type="button" data-video="ref2vid-05" data-title="Desert Wayfinder" aria-label="Play Desert Wayfinder Ref2Vid output, 8 seconds">
-            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-05.jpg" data-src="assets/ref2vid-05.mp4" aria-hidden="true"></video>
+            <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/ref2vid-05.jpg" data-src="assets/ref2vid-05.mp4" aria-hidden="true"></video>
             <span class="sample-caption"><small>8S WORLD</small><strong>Desert Wayfinder</strong><b aria-hidden="true">↗</b></span>
           </button>
           <div class="reference-inputs"><span>CHAR / SCENE</span>
@@ -235,7 +236,7 @@
         </div>
         <div class="sample-card sample-card-with-refs">
           <button class="sample-play" type="button" data-video="ref2vid-07" data-title="Ashen City" aria-label="Play Ashen City Ref2Vid output, 8 seconds">
-            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-07.jpg" data-src="assets/ref2vid-07.mp4" aria-hidden="true"></video>
+            <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/ref2vid-07.jpg" data-src="assets/ref2vid-07.mp4" aria-hidden="true"></video>
             <span class="sample-caption"><small>8S WORLD</small><strong>Ashen City</strong><b aria-hidden="true">↗</b></span>
           </button>
           <div class="reference-inputs"><span>CHAR / SCENE</span>
@@ -245,7 +246,7 @@
         </div>
         <div class="sample-card sample-card-with-refs">
           <button class="sample-play" type="button" data-video="ref2vid-08" data-title="Countryside Path" aria-label="Play Countryside Path Ref2Vid output, 8 seconds">
-            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-08.jpg" data-src="assets/ref2vid-08.mp4" aria-hidden="true"></video>
+            <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/ref2vid-08.jpg" data-src="assets/ref2vid-08.mp4" aria-hidden="true"></video>
             <span class="sample-caption"><small>8S WORLD</small><strong>Countryside Path</strong><b aria-hidden="true">↗</b></span>
           </button>
           <div class="reference-inputs"><span>CHAR / SCENE</span>
@@ -255,7 +256,7 @@
         </div>
         <div class="sample-card sample-card-with-refs">
           <button class="sample-play" type="button" data-video="ref2vid-15" data-title="Ember Bridge" aria-label="Play Ember Bridge Ref2Vid output, 8 seconds">
-            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-15.jpg" data-src="assets/ref2vid-15.mp4" aria-hidden="true"></video>
+            <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/ref2vid-15.jpg" data-src="assets/ref2vid-15.mp4" aria-hidden="true"></video>
             <span class="sample-caption"><small>8S WORLD</small><strong>Ember Bridge</strong><b aria-hidden="true">↗</b></span>
           </button>
           <div class="reference-inputs"><span>CHAR / SCENE</span>
@@ -265,7 +266,7 @@
         </div>
         <div class="sample-card sample-card-with-refs">
           <button class="sample-play" type="button" data-video="ref2vid-16" data-title="Overgrown Streets" aria-label="Play Overgrown Streets Ref2Vid output, 8 seconds">
-            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-16.jpg" data-src="assets/ref2vid-16.mp4" aria-hidden="true"></video>
+            <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/ref2vid-16.jpg" data-src="assets/ref2vid-16.mp4" aria-hidden="true"></video>
             <span class="sample-caption"><small>8S WORLD</small><strong>Overgrown Streets</strong><b aria-hidden="true">↗</b></span>
           </button>
           <div class="reference-inputs"><span>CHAR / SCENE</span>
@@ -275,7 +276,7 @@
         </div>
         <div class="sample-card sample-card-with-refs">
           <button class="sample-play" type="button" data-video="ref2vid-19" data-title="Railway Crossing" aria-label="Play Railway Crossing Ref2Vid output, 8 seconds">
-            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-19.jpg" data-src="assets/ref2vid-19.mp4" aria-hidden="true"></video>
+            <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/ref2vid-19.jpg" data-src="assets/ref2vid-19.mp4" aria-hidden="true"></video>
             <span class="sample-caption"><small>8S WORLD</small><strong>Railway Crossing</strong><b aria-hidden="true">↗</b></span>
           </button>
           <div class="reference-inputs"><span>CHAR / SCENE</span>
@@ -302,35 +303,35 @@
       <div class="capability-subhead"><strong>LONG ROLLOUTS</strong><span>30 SECONDS / 08 CASES</span></div>
       <div class="carousel-viewport" id="carousel-text-event-long" role="group" aria-roledescription="carousel" aria-label="30-second Text Event cases" tabindex="0">
         <button class="sample-card" type="button" data-video="text-eclipse" data-title="Desert Eclipse" aria-label="Play Desert Eclipse Text Event output, 30 seconds">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/text-eclipse.jpg" data-src="assets/text-eclipse-preview.mp4" aria-hidden="true"></video>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/text-eclipse.jpg" data-src="assets/text-eclipse-preview.mp4" aria-hidden="true"></video>
           <span class="sample-caption"><small>30S ROLLOUT</small><strong>Desert Eclipse</strong><b aria-hidden="true">↗</b></span>
         </button>
         <button class="sample-card" type="button" data-video="text-0152" data-title="Stone Giant at the Ruins" aria-label="Play Stone Giant at the Ruins Text Event output, 30 seconds">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/text-0152.jpg" data-src="assets/text-0152-preview.mp4" aria-hidden="true"></video>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/text-0152.jpg" data-src="assets/text-0152-preview.mp4" aria-hidden="true"></video>
           <span class="sample-caption"><small>30S ROLLOUT</small><strong>Stone Giant</strong><b aria-hidden="true">↗</b></span>
         </button>
         <button class="sample-card" type="button" data-video="text-0558" data-title="Glacial Terrain" aria-label="Play Glacial Terrain Text Event output, 30 seconds">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/text-0558.jpg" data-src="assets/text-0558-preview.mp4" aria-hidden="true"></video>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/text-0558.jpg" data-src="assets/text-0558-preview.mp4" aria-hidden="true"></video>
           <span class="sample-caption"><small>30S ROLLOUT</small><strong>Glacial Terrain</strong><b aria-hidden="true">↗</b></span>
         </button>
         <button class="sample-card" type="button" data-video="text-0584" data-title="Falling Stars" aria-label="Play Falling Stars Text Event output, 30 seconds">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/text-0584.jpg" data-src="assets/text-0584-preview.mp4" aria-hidden="true"></video>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/text-0584.jpg" data-src="assets/text-0584-preview.mp4" aria-hidden="true"></video>
           <span class="sample-caption"><small>30S ROLLOUT</small><strong>Falling Stars</strong><b aria-hidden="true">↗</b></span>
         </button>
         <button class="sample-card" type="button" data-video="text-0601" data-title="Storm at the Observatory" aria-label="Play Storm at the Observatory Text Event output, 30 seconds">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/text-0601.jpg" data-src="assets/text-0601-preview.mp4" aria-hidden="true"></video>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/text-0601.jpg" data-src="assets/text-0601-preview.mp4" aria-hidden="true"></video>
           <span class="sample-caption"><small>30S ROLLOUT</small><strong>Observatory Storm</strong><b aria-hidden="true">↗</b></span>
         </button>
         <button class="sample-card" type="button" data-video="text-0627" data-title="Wetland Sunburst" aria-label="Play Wetland Sunburst Text Event output, 30 seconds">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/text-0627.jpg" data-src="assets/text-0627-preview.mp4" aria-hidden="true"></video>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/text-0627.jpg" data-src="assets/text-0627-preview.mp4" aria-hidden="true"></video>
           <span class="sample-caption"><small>30S ROLLOUT</small><strong>Wetland Sunburst</strong><b aria-hidden="true">↗</b></span>
         </button>
         <button class="sample-card" type="button" data-video="text-spire" data-title="Rising Mountain" aria-label="Play Rising Mountain Text Event output, 30 seconds">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/text-spire.jpg" data-src="assets/text-spire-preview.mp4" aria-hidden="true"></video>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/text-spire.jpg" data-src="assets/text-spire-preview.mp4" aria-hidden="true"></video>
           <span class="sample-caption"><small>30S ROLLOUT</small><strong>Rising Mountain</strong><b aria-hidden="true">↗</b></span>
         </button>
         <button class="sample-card" type="button" data-video="text-0131" data-title="Illustrated World" aria-label="Play Illustrated World Text Event output, 30 seconds">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/text-0131.jpg" data-src="assets/text-0131-preview.mp4" aria-hidden="true"></video>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/text-0131.jpg" data-src="assets/text-0131-preview.mp4" aria-hidden="true"></video>
           <span class="sample-caption"><small>30S ROLLOUT</small><strong>Illustrated World</strong><b aria-hidden="true">↗</b></span>
         </button>
       </div>
@@ -345,35 +346,35 @@
       <div class="capability-subhead capability-subhead-secondary"><strong>MORE EVENTS</strong><span>8 SECONDS / 08 CASES</span></div>
       <div class="carousel-viewport" id="carousel-text-event-short" role="group" aria-roledescription="carousel" aria-label="8-second Text Event cases" tabindex="0">
         <button class="sample-card" type="button" data-video="text-short-stained-glass" data-title="Stained Glass World" aria-label="Play Stained Glass World Text Event output, 8 seconds">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/text-short-stained-glass.jpg" data-src="assets/text-short-stained-glass.mp4" aria-hidden="true"></video>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/text-short-stained-glass.jpg" data-src="assets/text-short-stained-glass.mp4" aria-hidden="true"></video>
           <span class="sample-caption"><small>8S ROLLOUT</small><strong>Stained Glass</strong><b aria-hidden="true">↗</b></span>
         </button>
         <button class="sample-card" type="button" data-video="text-short-lighthouse-meteor" data-title="Lighthouse Meteor" aria-label="Play Lighthouse Meteor Text Event output, 8 seconds">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/text-short-lighthouse-meteor.jpg" data-src="assets/text-short-lighthouse-meteor.mp4" aria-hidden="true"></video>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/text-short-lighthouse-meteor.jpg" data-src="assets/text-short-lighthouse-meteor.mp4" aria-hidden="true"></video>
           <span class="sample-caption"><small>8S ROLLOUT</small><strong>Lighthouse Meteor</strong><b aria-hidden="true">↗</b></span>
         </button>
         <button class="sample-card" type="button" data-video="text-short-embroidered" data-title="Embroidered World" aria-label="Play Embroidered World Text Event output, 8 seconds">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/text-short-embroidered.jpg" data-src="assets/text-short-embroidered.mp4" aria-hidden="true"></video>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/text-short-embroidered.jpg" data-src="assets/text-short-embroidered.mp4" aria-hidden="true"></video>
           <span class="sample-caption"><small>8S ROLLOUT</small><strong>Embroidered World</strong><b aria-hidden="true">↗</b></span>
         </button>
         <button class="sample-card" type="button" data-video="text-short-xianxia-crane" data-title="Xianxia Crane Flight" aria-label="Play Xianxia Crane Flight Text Event output, 8 seconds">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/text-short-xianxia-crane.jpg" data-src="assets/text-short-xianxia-crane.mp4" aria-hidden="true"></video>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/text-short-xianxia-crane.jpg" data-src="assets/text-short-xianxia-crane.mp4" aria-hidden="true"></video>
           <span class="sample-caption"><small>8S ROLLOUT</small><strong>Crane Flight</strong><b aria-hidden="true">↗</b></span>
         </button>
         <button class="sample-card" type="button" data-video="ice-lava" data-title="Ice to Lava" aria-label="Play Ice to Lava Text Event output, 8 seconds">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ice-lava.jpg" data-src="assets/ice-lava.mp4" aria-hidden="true"></video>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/ice-lava.jpg" data-src="assets/ice-lava.mp4" aria-hidden="true"></video>
           <span class="sample-caption"><small>8S ROLLOUT</small><strong>Ice → Lava</strong><b aria-hidden="true">↗</b></span>
         </button>
         <button class="sample-card" type="button" data-video="text-short-karst-beacon" data-title="Golden Beacon" aria-label="Play Golden Beacon Text Event output, 8 seconds">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/text-short-karst-beacon.jpg" data-src="assets/text-short-karst-beacon.mp4" aria-hidden="true"></video>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/text-short-karst-beacon.jpg" data-src="assets/text-short-karst-beacon.mp4" aria-hidden="true"></video>
           <span class="sample-caption"><small>8S ROLLOUT</small><strong>Golden Beacon</strong><b aria-hidden="true">↗</b></span>
         </button>
         <button class="sample-card" type="button" data-video="road-sandstorm" data-title="Sandstorm" aria-label="Play Sandstorm Text Event output, 8 seconds">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/road-sandstorm.jpg" data-src="assets/road-sandstorm.mp4" aria-hidden="true"></video>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/road-sandstorm.jpg" data-src="assets/road-sandstorm.mp4" aria-hidden="true"></video>
           <span class="sample-caption"><small>8S ROLLOUT</small><strong>Sandstorm</strong><b aria-hidden="true">↗</b></span>
         </button>
         <button class="sample-card" type="button" data-video="palace-neon" data-title="Palace to Cyberpunk" aria-label="Play Palace to Cyberpunk Text Event output, 8 seconds">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/palace-neon.jpg" data-src="assets/palace-neon.mp4" aria-hidden="true"></video>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/palace-neon.jpg" data-src="assets/palace-neon.mp4" aria-hidden="true"></video>
           <span class="sample-caption"><small>8S ROLLOUT</small><strong>Palace → Cyberpunk</strong><b aria-hidden="true">↗</b></span>
         </button>
       </div>
@@ -394,7 +395,7 @@
       <div class="carousel-viewport" id="carousel-ref-event" role="group" aria-roledescription="carousel" aria-label="Ref Event cases" tabindex="0">
         <div class="sample-card sample-card-with-refs">
           <button class="sample-play" type="button" data-video="refevent-new-01" data-title="Meadow Knight" aria-label="Play Meadow Knight Ref Event output">
-            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/refevent-new-01.jpg" data-src="assets/refevent-new-01.mp4" aria-hidden="true"></video>
+            <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/refevent-new-01.jpg" data-src="assets/refevent-new-01.mp4" aria-hidden="true"></video>
             <span class="sample-caption"><small>REF EVENT</small><strong>Meadow Knight</strong><b aria-hidden="true">↗</b></span>
           </button>
           <div class="reference-inputs"><span>START / EVENT</span>
@@ -404,7 +405,7 @@
         </div>
         <div class="sample-card sample-card-with-refs">
           <button class="sample-play" type="button" data-video="refevent-new-02" data-title="Fox Spirit" aria-label="Play Fox Spirit Ref Event output">
-            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/refevent-new-02.jpg" data-src="assets/refevent-new-02.mp4" aria-hidden="true"></video>
+            <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/refevent-new-02.jpg" data-src="assets/refevent-new-02.mp4" aria-hidden="true"></video>
             <span class="sample-caption"><small>REF EVENT</small><strong>Fox Spirit</strong><b aria-hidden="true">↗</b></span>
           </button>
           <div class="reference-inputs"><span>START / RECREATED REF</span>
@@ -414,7 +415,7 @@
         </div>
         <div class="sample-card sample-card-with-refs">
           <button class="sample-play" type="button" data-video="refevent-new-03" data-title="Night Walker" aria-label="Play Night Walker Ref Event output">
-            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/refevent-new-03.jpg" data-src="assets/refevent-new-03.mp4" aria-hidden="true"></video>
+            <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/refevent-new-03.jpg" data-src="assets/refevent-new-03.mp4" aria-hidden="true"></video>
             <span class="sample-caption"><small>REF EVENT</small><strong>Night Walker</strong><b aria-hidden="true">↗</b></span>
           </button>
           <div class="reference-inputs"><span>START / EVENT</span>
@@ -424,7 +425,7 @@
         </div>
         <div class="sample-card sample-card-with-refs">
           <button class="sample-play" type="button" data-video="refevent-01" data-title="Ember Guardian" aria-label="Play Ember Guardian Ref Event output">
-            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/refevent-01.jpg" data-src="assets/refevent-01.mp4" aria-hidden="true"></video>
+            <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/refevent-01.jpg" data-src="assets/refevent-01.mp4" aria-hidden="true"></video>
             <span class="sample-caption"><small>REF EVENT</small><strong>Ember Guardian</strong><b aria-hidden="true">↗</b></span>
           </button>
           <div class="reference-inputs"><span>START / EVENT</span>
@@ -434,7 +435,7 @@
         </div>
         <div class="sample-card sample-card-with-refs">
           <button class="sample-play" type="button" data-video="refevent-03" data-title="Winged Automaton" aria-label="Play Winged Automaton Ref Event output">
-            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/refevent-03.jpg" data-src="assets/refevent-03.mp4" aria-hidden="true"></video>
+            <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/refevent-03.jpg" data-src="assets/refevent-03.mp4" aria-hidden="true"></video>
             <span class="sample-caption"><small>REF EVENT</small><strong>Winged Automaton</strong><b aria-hidden="true">↗</b></span>
           </button>
           <div class="reference-inputs"><span>START / EVENT</span>
@@ -444,7 +445,7 @@
         </div>
         <div class="sample-card sample-card-with-refs">
           <button class="sample-play" type="button" data-video="refevent-06" data-title="Paper Automaton" aria-label="Play Paper Automaton Ref Event output">
-            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/refevent-06.jpg" data-src="assets/refevent-06.mp4" aria-hidden="true"></video>
+            <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/refevent-06.jpg" data-src="assets/refevent-06.mp4" aria-hidden="true"></video>
             <span class="sample-caption"><small>REF EVENT</small><strong>Paper Automaton</strong><b aria-hidden="true">↗</b></span>
           </button>
           <div class="reference-inputs"><span>START / EVENT</span>
@@ -454,7 +455,7 @@
         </div>
         <div class="sample-card sample-card-with-refs">
           <button class="sample-play" type="button" data-video="refevent-07" data-title="Lava Sentinel" aria-label="Play Lava Sentinel Ref Event output">
-            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/refevent-07.jpg" data-src="assets/refevent-07.mp4" aria-hidden="true"></video>
+            <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/refevent-07.jpg" data-src="assets/refevent-07.mp4" aria-hidden="true"></video>
             <span class="sample-caption"><small>REF EVENT</small><strong>Lava Sentinel</strong><b aria-hidden="true">↗</b></span>
           </button>
           <div class="reference-inputs"><span>START / EVENT</span>
@@ -464,7 +465,7 @@
         </div>
         <div class="sample-card sample-card-with-refs">
           <button class="sample-play" type="button" data-video="refevent-09" data-title="Clockwork Visitor" aria-label="Play Clockwork Visitor Ref Event output">
-            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/refevent-09.jpg" data-src="assets/refevent-09.mp4" aria-hidden="true"></video>
+            <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/refevent-09.jpg" data-src="assets/refevent-09.mp4" aria-hidden="true"></video>
             <span class="sample-caption"><small>REF EVENT</small><strong>Clockwork Visitor</strong><b aria-hidden="true">↗</b></span>
           </button>
           <div class="reference-inputs"><span>START / EVENT</span>
@@ -490,24 +491,24 @@
       </div>
       <div class="carousel-viewport" id="carousel-interaction" role="group" aria-roledescription="carousel" aria-label="Interaction cases" tabindex="0">
         <button class="sample-card" type="button" data-video="interaction-open-door" data-title="Open the Door" aria-label="Play Open the Door interaction output">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/interaction-open-door.jpg" data-src="assets/interaction-open-door.mp4" aria-hidden="true"></video><span class="sample-caption"><small>INTERACTION</small><strong>Open the Door</strong><b aria-hidden="true">↗</b></span>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/interaction-open-door.jpg" data-src="assets/interaction-open-door.mp4" aria-hidden="true"></video><span class="sample-caption"><small>INTERACTION</small><strong>Open the Door</strong><b aria-hidden="true">↗</b></span>
         </button>
         <button class="sample-card" type="button" data-video="interaction-magic-box" data-title="Magic Box" aria-label="Play Magic Box interaction output">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/interaction-magic-box.jpg" data-src="assets/interaction-magic-box.mp4" aria-hidden="true"></video><span class="sample-caption"><small>INTERACTION</small><strong>Magic Box</strong><b aria-hidden="true">↗</b></span>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/interaction-magic-box.jpg" data-src="assets/interaction-magic-box.mp4" aria-hidden="true"></video><span class="sample-caption"><small>INTERACTION</small><strong>Magic Box</strong><b aria-hidden="true">↗</b></span>
         </button>
         <button class="sample-card" type="button" data-video="interaction-sword-cut" data-title="Cut the Chain" aria-label="Play Cut the Chain interaction output">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/interaction-sword-cut.jpg" data-src="assets/interaction-sword-cut.mp4" aria-hidden="true"></video><span class="sample-caption"><small>INTERACTION</small><strong>Cut the Chain</strong><b aria-hidden="true">↗</b></span>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/interaction-sword-cut.jpg" data-src="assets/interaction-sword-cut.mp4" aria-hidden="true"></video><span class="sample-caption"><small>INTERACTION</small><strong>Cut the Chain</strong><b aria-hidden="true">↗</b></span>
         </button>
         <button class="sample-card" type="button" data-video="pat" data-title="Pat the Cow" aria-label="Play Pat the Cow Interaction output">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/pat.jpg" data-src="assets/pat.mp4" aria-hidden="true"></video>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/pat.jpg" data-src="assets/pat.mp4" aria-hidden="true"></video>
           <span class="sample-caption"><small>INTERACTION</small><strong>Pat the Cow</strong><b aria-hidden="true">↗</b></span>
         </button>
         <button class="sample-card" type="button" data-video="lift" data-title="Lift the Cow" aria-label="Play Lift the Cow Interaction output">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/lift.jpg" data-src="assets/lift.mp4" aria-hidden="true"></video>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/lift.jpg" data-src="assets/lift.mp4" aria-hidden="true"></video>
           <span class="sample-caption"><small>INTERACTION</small><strong>Lift the Cow</strong><b aria-hidden="true">↗</b></span>
         </button>
         <button class="sample-card" type="button" data-video="drag" data-title="Drag the Cow" aria-label="Play Drag the Cow Interaction output">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/drag.jpg" data-src="assets/drag.mp4" aria-hidden="true"></video>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/drag.jpg" data-src="assets/drag.mp4" aria-hidden="true"></video>
           <span class="sample-caption"><small>INTERACTION</small><strong>Drag the Cow</strong><b aria-hidden="true">↗</b></span>
         </button>
       </div>
@@ -529,28 +530,28 @@
       </div>
       <div class="carousel-viewport" id="carousel-embodied" role="group" aria-roledescription="carousel" aria-label="Embodied cases" tabindex="0">
         <button class="sample-card" type="button" data-video="embodied-lift" data-title="Pick and Place" aria-label="Play Pick and Place embodied output">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/embodied-lift.jpg" data-src="assets/embodied-lift.mp4" aria-hidden="true"></video><span class="sample-caption"><small>EMBODIED</small><strong>Pick and Place</strong><b aria-hidden="true">↗</b></span>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/embodied-lift.jpg" data-src="assets/embodied-lift.mp4" aria-hidden="true"></video><span class="sample-caption"><small>EMBODIED</small><strong>Pick and Place</strong><b aria-hidden="true">↗</b></span>
         </button>
         <button class="sample-card" type="button" data-video="embodied-humanoid" data-title="Humanoid Carry" aria-label="Play Humanoid Carry embodied output">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/embodied-humanoid.jpg" data-src="assets/embodied-humanoid.mp4" aria-hidden="true"></video><span class="sample-caption"><small>EMBODIED</small><strong>Humanoid Carry</strong><b aria-hidden="true">↗</b></span>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/embodied-humanoid.jpg" data-src="assets/embodied-humanoid.mp4" aria-hidden="true"></video><span class="sample-caption"><small>EMBODIED</small><strong>Humanoid Carry</strong><b aria-hidden="true">↗</b></span>
         </button>
         <button class="sample-card" type="button" data-video="embodied-mining" data-title="Mining Crawler" aria-label="Play Mining Crawler embodied output">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/embodied-mining.jpg" data-src="assets/embodied-mining.mp4" aria-hidden="true"></video><span class="sample-caption"><small>EMBODIED</small><strong>Mining Crawler</strong><b aria-hidden="true">↗</b></span>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/embodied-mining.jpg" data-src="assets/embodied-mining.mp4" aria-hidden="true"></video><span class="sample-caption"><small>EMBODIED</small><strong>Mining Crawler</strong><b aria-hidden="true">↗</b></span>
         </button>
         <button class="sample-card" type="button" data-video="embodied-bimanual" data-title="Bimanual Pregrasp" aria-label="Play Bimanual Pregrasp embodied output">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/embodied-bimanual.jpg" data-src="assets/embodied-bimanual.mp4" aria-hidden="true"></video><span class="sample-caption"><small>EMBODIED</small><strong>Bimanual Pregrasp</strong><b aria-hidden="true">↗</b></span>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/embodied-bimanual.jpg" data-src="assets/embodied-bimanual.mp4" aria-hidden="true"></video><span class="sample-caption"><small>EMBODIED</small><strong>Bimanual Pregrasp</strong><b aria-hidden="true">↗</b></span>
         </button>
         <button class="sample-card" type="button" data-video="embodied-warehouse" data-title="Warehouse Navigation" aria-label="Play Warehouse Navigation embodied output">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/embodied-warehouse.jpg" data-src="assets/embodied-warehouse.mp4" aria-hidden="true"></video><span class="sample-caption"><small>EMBODIED</small><strong>Warehouse Navigation</strong><b aria-hidden="true">↗</b></span>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/embodied-warehouse.jpg" data-src="assets/embodied-warehouse.mp4" aria-hidden="true"></video><span class="sample-caption"><small>EMBODIED</small><strong>Warehouse Navigation</strong><b aria-hidden="true">↗</b></span>
         </button>
         <button class="sample-card" type="button" data-video="embodied-underwater" data-title="Underwater ROV" aria-label="Play Underwater ROV embodied output">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/embodied-underwater.jpg" data-src="assets/embodied-underwater.mp4" aria-hidden="true"></video><span class="sample-caption"><small>EMBODIED</small><strong>Underwater ROV</strong><b aria-hidden="true">↗</b></span>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/embodied-underwater.jpg" data-src="assets/embodied-underwater.mp4" aria-hidden="true"></video><span class="sample-caption"><small>EMBODIED</small><strong>Underwater ROV</strong><b aria-hidden="true">↗</b></span>
         </button>
         <button class="sample-card" type="button" data-video="embodied-greenhouse" data-title="Greenhouse Inspection" aria-label="Play Greenhouse Inspection embodied output">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/embodied-greenhouse.jpg" data-src="assets/embodied-greenhouse.mp4" aria-hidden="true"></video><span class="sample-caption"><small>EMBODIED</small><strong>Greenhouse Inspection</strong><b aria-hidden="true">↗</b></span>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/embodied-greenhouse.jpg" data-src="assets/embodied-greenhouse.mp4" aria-hidden="true"></video><span class="sample-caption"><small>EMBODIED</small><strong>Greenhouse Inspection</strong><b aria-hidden="true">↗</b></span>
         </button>
         <button class="sample-card" type="button" data-video="embodied-drone" data-title="Drone Flight" aria-label="Play Drone Flight embodied output">
-          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/embodied-drone.jpg" data-src="assets/embodied-drone.mp4" aria-hidden="true"></video><span class="sample-caption"><small>EMBODIED</small><strong>Drone Flight</strong><b aria-hidden="true">↗</b></span>
+          <video class="autoplay-preview" muted loop playsinline preload="none" loading="lazy" data-poster="assets/embodied-drone.jpg" data-src="assets/embodied-drone.mp4" aria-hidden="true"></video><span class="sample-caption"><small>EMBODIED</small><strong>Drone Flight</strong><b aria-hidden="true">↗</b></span>
         </button>
       </div>
       <div class="carousel-footer" aria-controls="carousel-embodied">

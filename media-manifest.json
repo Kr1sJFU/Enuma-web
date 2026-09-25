@@ -132,8 +132,9 @@
   },
   {
     "asset": "interactive/magic-fireball-brazier",
-    "bytes": 43442740,
-    "source": "video_tobe_concated/magic_fireball_brazier/edit/interactive/"
+    "bytes": 6783129,
+    "source": "video_tobe_concated/magic_fireball_brazier/edit/interactive/",
+    "web_encoding": "720p H.264 faststart; original timing retained"
   },
   {
     "asset": "interactive/car-wash",
@@ -142,8 +143,9 @@
   },
   {
     "asset": "interactive/residential-street",
-    "bytes": 65811053,
-    "source": "video_tobe_concated/residential_street/edit/interactive/"
+    "bytes": 36758737,
+    "source": "video_tobe_concated/residential_street/edit/interactive/",
+    "web_encoding": "720p H.264 faststart; original timing retained"
   },
   {
     "asset": "enuma-demo",

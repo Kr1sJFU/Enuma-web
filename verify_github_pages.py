@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import posixpath
 import re
+import struct
 from html.parser import HTMLParser
 from pathlib import Path, PurePosixPath
 from urllib.parse import unquote, urlsplit
@@ -23,7 +24,7 @@ class References(HTMLParser):
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         values = dict(attrs)
-        self.values.extend(values[key] for key in ("href", "src", "poster", "data-src", "data-full-src")
+        self.values.extend(values[key] for key in ("href", "src", "poster", "data-poster", "data-src", "data-full-src")
                            if values.get(key))
         if tag == "button" and values.get("data-video"):
             self.videos.append(values["data-video"])
@@ -36,6 +37,30 @@ def exact_path(path: PurePosixPath) -> bool:
             return False
         current /= part
     return current.exists()
+
+
+def has_faststart_metadata(path: Path) -> bool:
+    """Allow progressive playback before the browser has downloaded the whole MP4."""
+    size = path.stat().st_size
+    offset = 0
+    with path.open("rb") as video:
+        while offset + 8 <= size:
+            video.seek(offset)
+            atom_size, atom_type = struct.unpack(">I4s", video.read(8))
+            header_size = 8
+            if atom_size == 1:
+                atom_size = struct.unpack(">Q", video.read(8))[0]
+                header_size = 16
+            elif atom_size == 0:
+                atom_size = size - offset
+            if atom_size < header_size or offset + atom_size > size:
+                return False
+            if atom_type == b"moov":
+                return True
+            if atom_type == b"mdat":
+                return False
+            offset += atom_size
+    return False
 
 
 def verify_reference(page: Path, reference: str) -> None:
@@ -68,6 +93,9 @@ def main() -> None:
     assert total < SITE_LIMIT, f"Pages artifact exceeds 1 GB: {total} bytes"
     large = [path for path in files if path.stat().st_size >= FILE_LIMIT]
     assert not large, f"GitHub rejects files at or above 100 MB: {large}"
+    videos = [path for path in files if path.suffix.lower() == ".mp4"]
+    non_progressive = [path for path in videos if not has_faststart_metadata(path)]
+    assert not non_progressive, f"MP4 metadata must precede video data: {non_progressive}"
 
     cases = 0
     for page in SITE.rglob("*.html"):
@@ -124,7 +152,7 @@ def main() -> None:
         verify_reference(bench_page, f"../assets/{asset}.mp4")
         verify_reference(bench_page, f"../assets/{asset}.jpg")
 
-    print(f"GitHub Pages artifact OK: {len(files)} files, {total / 1_000_000:.1f} MB, {cases} capability videos")
+    print(f"GitHub Pages artifact OK: {len(files)} files, {total / 1_000_000:.1f} MB, {len(videos)} progressive MP4s, {cases} capability videos")
 
 
 if __name__ == "__main__":

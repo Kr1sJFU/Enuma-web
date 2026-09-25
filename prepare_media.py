@@ -62,10 +62,26 @@ def main() -> None:
         ("car-wash", WORKSPACE / "video_tobe_concated/car_wash/edit/interactive", "car-wash"),
         ("residential-street", WORKSPACE / "video_tobe_concated/residential_street/edit/interactive", "residential-street"),
     ]
+    # Keep the turn timing and 720p frames, while capping unusually high bitrates
+    # in the web copies. Original interactive masters remain in their edit folders.
+    interactive_web_encodes = {
+        "magic-fireball-brazier": (21, "6000k"),
+        "residential-street": (18, "12000k"),
+    }
     for slug, source, _ in interactive_sources:
         shutil.copytree(source, interactive / slug, dirs_exist_ok=True)
+        if slug in interactive_web_encodes:
+            crf, maxrate = interactive_web_encodes[slug]
+            output = interactive / slug / "assets" / f"{slug}.mp4"
+            encoded = output.with_name(f"{slug}-web.mp4")
+            run("-i", source / "assets" / f"{slug}.mp4", "-an", "-c:v", "libx264",
+                "-preset", "medium", "-crf", crf, "-maxrate", maxrate,
+                "-bufsize", f"{int(maxrate[:-1]) * 2}k", "-g", 32,
+                "-keyint_min", 16, "-sc_threshold", 0, "-pix_fmt", "yuv420p",
+                "-movflags", "+faststart", encoded)
+            encoded.replace(output)
         page = interactive / slug / "index.html"
-        page.write_text(page.read_text().replace(
+        page.write_text(page.read_text().replace('preload="auto"', 'preload="metadata"').replace(
             '<span class="brand">ENUMA<span class="brand-dot">.</span></span>',
             '<a class="brand" href="../../" aria-label="Back to ENUMA">ENUMA<span class="brand-dot">.</span></a>',
         ))
@@ -79,10 +95,13 @@ def main() -> None:
     manifest.extend({"asset": name, "bytes": (ASSETS / f"{name}.mp4").stat().st_size,
                      "source": str(path.relative_to(WORKSPACE))}
                     for name, path, *_ in sources)
-    manifest.extend({"asset": f"interactive/{slug}",
-                     "bytes": (interactive / slug / "assets" / f"{asset}.mp4").stat().st_size,
-                     "source": str(source.relative_to(WORKSPACE)) + "/"}
-                    for slug, source, asset in interactive_sources)
+    for slug, source, asset in interactive_sources:
+        record = {"asset": f"interactive/{slug}",
+                  "bytes": (interactive / slug / "assets" / f"{asset}.mp4").stat().st_size,
+                  "source": str(source.relative_to(WORKSPACE)) + "/"}
+        if slug in interactive_web_encodes:
+            record["web_encoding"] = "720p H.264 faststart; original timing retained"
+        manifest.append(record)
     (ROOT / "media-manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
 
 

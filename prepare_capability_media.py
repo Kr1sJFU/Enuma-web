@@ -34,11 +34,22 @@ REF_EVENT_SOURCES = {
        for n in REF_EVENT_8S},
 }
 TEXT_EVENT_8S = {
-    "text-short-stained-glass": "text event/stained_glass_world_8s.mp4",
+    "text-short-stained-glass": "text event/stained_glass_world_8s-ezremove.mp4",
     "text-short-embroidered": "text event/embroidered_tapestry_world_8s.mp4",
     "text-short-lighthouse-meteor": "text event/edit/lighthouse_meteor_8s.mp4",
     "text-short-xianxia-crane": "text event/xianxia_crane.mp4",
     "text-short-karst-beacon": "text event/turn1_karst_golden_beacon_v1.mp4",
+}
+
+INTERACTION = {
+    "interaction-bookshelf": "interaction/book_shelf_departure_chain_16s.mp4",
+    "interaction-magic-box": "interaction/magic_box.mp4",
+    "interaction-wipe-mirror": "interaction/wipe_mirror.mp4",
+    "interaction-release-car": "interaction/release_car.mp4",
+    "interaction-stir-chocolate": "interaction/stir_chocolate.mp4",
+    "interaction-wipe-flour": "interaction/wipe_flour_counter.mp4",
+    "interaction-open-door": "interaction/open_door.mp4",
+    "interaction-drive-car": "interaction/drive_electric_car.mp4",
 }
 
 REF2VID_30S = {
@@ -57,9 +68,7 @@ VIDEOS = {
        for n in REF2VID_8S},
     **REF_EVENT_SOURCES,
     **TEXT_EVENT_8S,
-    "interaction-open-door": "interaction/open_door.mp4",
-    "interaction-magic-box": "interaction/magic_box.mp4",
-    "interaction-sword-cut": "interaction/sword_cut.mp4",
+    **INTERACTION,
     "embodied-lift": "embodied/lift_right_lower.mp4",
     "embodied-warehouse": "embodied/warehouse_amr.mp4",
     "embodied-greenhouse": "embodied/greenhouse_inspection.mp4",
@@ -117,6 +126,7 @@ def main() -> None:
                 and not item.get("asset", "").startswith("text-")
                 and not item.get("asset", "").startswith("refevent-")
                 and not item.get("asset", "").startswith("embodied-")
+                and not item.get("asset", "").startswith("interaction-")
                 and item.get("asset") not in VIDEOS and item.get("asset") not in TEXT_EVENTS
                 and item.get("asset") not in {f"{name}-preview" for name in TEXT_EVENTS}
                 and item.get("asset") not in IMAGES
@@ -192,6 +202,10 @@ def main() -> None:
     used_ref2vid = {item["asset"] for item in manifest if item["asset"].startswith("ref2vid-")}
     for path in ASSETS.glob("ref2vid-*"):
         if path.is_file() and path.stem not in used_ref2vid:
+            path.unlink()
+    used_interaction = {item["asset"] for item in manifest if item["asset"].startswith("interaction-")}
+    for path in ASSETS.glob("interaction-*"):
+        if path.is_file() and path.stem not in used_interaction:
             path.unlink()
     used_embodied = {item["asset"] for item in manifest if item["asset"].startswith("embodied-")}
     for path in ASSETS.glob("embodied-*"):

@@ -77,8 +77,8 @@
   },
   {
     "asset": "palace-neon",
-    "bytes": 1580547,
-    "source": "text event/palace_to_cyberpunk.mp4"
+    "bytes": 1438668,
+    "source": "text event/palace_to_cyberpunk-ezremove.mp4"
   },
   {
     "asset": "road-sandstorm",
@@ -245,8 +245,8 @@
   },
   {
     "asset": "text-short-stained-glass",
-    "bytes": 1698427,
-    "source": "text event/stained_glass_world_8s.mp4"
+    "bytes": 1560947,
+    "source": "text event/stained_glass_world_8s-ezremove.mp4"
   },
   {
     "asset": "text-short-embroidered",
@@ -272,9 +272,9 @@
     "source": "text event/turn1_karst_golden_beacon_v1.mp4"
   },
   {
-    "asset": "interaction-open-door",
-    "bytes": 1070261,
-    "source": "interaction/open_door.mp4"
+    "asset": "interaction-bookshelf",
+    "bytes": 1668570,
+    "source": "interaction/book_shelf_departure_chain_16s.mp4"
   },
   {
     "asset": "interaction-magic-box",
@@ -282,9 +282,34 @@
     "source": "interaction/magic_box.mp4"
   },
   {
-    "asset": "interaction-sword-cut",
-    "bytes": 1622454,
-    "source": "interaction/sword_cut.mp4"
+    "asset": "interaction-wipe-mirror",
+    "bytes": 1298690,
+    "source": "interaction/wipe_mirror.mp4"
+  },
+  {
+    "asset": "interaction-release-car",
+    "bytes": 1131320,
+    "source": "interaction/release_car.mp4"
+  },
+  {
+    "asset": "interaction-stir-chocolate",
+    "bytes": 862216,
+    "source": "interaction/stir_chocolate.mp4"
+  },
+  {
+    "asset": "interaction-wipe-flour",
+    "bytes": 1733166,
+    "source": "interaction/wipe_flour_counter.mp4"
+  },
+  {
+    "asset": "interaction-open-door",
+    "bytes": 1070261,
+    "source": "interaction/open_door.mp4"
+  },
+  {
+    "asset": "interaction-drive-car",
+    "bytes": 727386,
+    "source": "interaction/drive_electric_car.mp4"
   },
   {
     "asset": "embodied-lift",

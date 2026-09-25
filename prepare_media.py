@@ -42,7 +42,7 @@ def main() -> None:
     ASSETS.mkdir(parents=True, exist_ok=True)
     sources = [
         ("ice-lava", WORKSPACE / "text event/ice_to_lava.mp4", 0, None, 6.6, 16),
-        ("palace-neon", WORKSPACE / "text event/palace_to_cyberpunk.mp4", 0, None, 6.5, 16),
+        ("palace-neon", WORKSPACE / "text event/palace_to_cyberpunk-ezremove.mp4", 0, None, 6.5, 16),
         ("road-sandstorm", WORKSPACE / "text event/road_sandstorm.mp4", 0, None, 5.5, 16),
         ("phoenix", WORKSPACE / "video demo/knight_event_phoenix.mp4", 0, None, 6.5, 16),
         ("spacecraft", WORKSPACE / "video demo/knight_event_spacecraft.mp4", 0, None, 6.5, 16),

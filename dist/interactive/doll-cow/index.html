@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0d0e">
+  <meta name="description" content="One shared scene, three possible actions. Choose how to interact with the plush cow in ENUMA.">
+  <title>Plush Cow — ENUMA Interactive</title>
+  <link rel="icon" href="../../assets/enuma_favicon_64.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <a class="brand" href="../../" aria-label="Back to ENUMA home"><img src="../../assets/enuma_logo_white.svg" alt="ENUMA" width="137" height="28"></a>
+      <span class="header-name">PLUSH COW <span>/ INTERACTIVE</span></span>
+    </header>
+    <main>
+      <section class="experience" aria-label="Plush Cow branching video">
+        <div class="stage">
+          <video id="cow-video" muted playsinline preload="none" poster="../../assets/cow-start.jpg" aria-label="A snowy scene leading to a plush cow"></video>
+          <img id="decision-frame" src="../../assets/cow-decision.jpg" alt="" hidden>
+          <button id="start-button" class="start-button" type="button" aria-label="Start the Plush Cow scene"><span aria-hidden="true">▶</span> START</button>
+          <span class="stage-mark">ONE SCENE / THREE FUTURES</span>
+        </div>
+        <div class="control-rail">
+          <div class="phase"><span id="phase-index">01 / 02</span><strong id="phase-label">Enter the scene</strong></div>
+          <div id="branch-options" class="branch-options" role="group" aria-label="Choose one action" hidden>
+            <button type="button" data-branch="pat" aria-label="Pat the cow"><kbd>1</kbd> PAT</button>
+            <button type="button" data-branch="lift" aria-label="Lift the cow"><kbd>2</kbd> LIFT</button>
+            <button type="button" data-branch="drag" aria-label="Drag the cow"><kbd>3</kbd> DRAG</button>
+          </div>
+          <button id="choose-again" class="choose-again" type="button" hidden>CHOOSE AGAIN <span aria-hidden="true">↗</span></button>
+          <button id="reset-button" class="reset-button" type="button" aria-label="Restart the scene" title="Restart">↺</button>
+        </div>
+      </section>
+      <p id="announcer" class="sr-only" aria-live="polite"></p>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#090c12" />
+    <title>Fireball / Brazier — ENUMA</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <a class="brand" href="../../" aria-label="Back to ENUMA">ENUMA<span class="brand-dot">.</span></a>
+        <span class="header-name">FIREBALL / BRAZIER <span>/ INTERACTIVE</span></span>
+      </header>
+
+      <main>
+        <section class="experience" aria-label="Fireball and brazier interactive video">
+          <div class="video-stage" id="video-stage" data-stage="0" data-mode="waiting">
+            <video id="demo-video" preload="auto" playsinline poster="cue_1.jpg"
+              aria-label="First-person approach to a brazier, magic fireball, and daylight transition">
+              <source src="assets/magic-fireball-brazier.mp4" type="video/mp4" />
+              Your browser does not support HTML video.
+            </video>
+            <button id="scene-hotspot" class="hotspot" type="button" hidden
+              aria-label="Light the brazier">
+              <span class="hotspot-ring"></span><span class="hotspot-dot"></span>
+            </button>
+          </div>
+
+          <div class="controls">
+            <div class="step">
+              <span id="step-number" class="step-number">01 / 03</span>
+              <span id="step-label" class="step-label">Approach the brazier</span>
+            </div>
+            <div class="actions">
+              <button id="continue-button" class="action-button" type="button" aria-label="Approach the brazier">
+                <kbd id="action-key">W</kbd>
+                <span id="action-label">APPROACH</span>
+                <span class="action-arrow" aria-hidden="true">↗</span>
+              </button>
+              <button id="reset-button" class="reset-button" type="button" aria-label="Restart experience" title="Restart">↺</button>
+            </div>
+          </div>
+        </section>
+
+        <div class="timeline" role="group" aria-label="Jump to an interaction turn">
+          <button class="timeline-step is-current" type="button" data-chapter="0" aria-label="Play turn 1: Approach the brazier" aria-current="step"><span class="timeline-bar"><span></span></span><span>01</span></button>
+          <button class="timeline-step" type="button" data-chapter="1" aria-label="Play turn 2: Light the brazier"><span class="timeline-bar"><span></span></span><span>02</span></button>
+          <button class="timeline-step" type="button" data-chapter="2" aria-label="Play turn 3: Step into daylight"><span class="timeline-bar"><span></span></span><span>03</span></button>
+        </div>
+        <p id="announcer" class="sr-only" aria-live="polite"></p>
+      </main>
+    </div>
+  </body>
+</html>

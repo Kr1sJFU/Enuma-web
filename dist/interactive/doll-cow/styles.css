@@ -1,0 +1,34 @@
+:root{color-scheme:dark;font-family:'Avenir Next','Helvetica Neue',Arial,sans-serif;background:#0a0d0e;color:#f1f4f0}
+*{box-sizing:border-box}
+body{margin:0;min-width:320px}
+button{font:inherit;cursor:pointer}
+button:focus-visible,a:focus-visible{outline:2px solid #ddf1db;outline-offset:3px}
+[hidden]{display:none!important}
+.page{width:min(100% - 40px,1180px);margin:auto}
+.header{height:76px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:inline-flex;align-items:center}
+.brand img{width:137px;height:auto}
+.header-name{font-size:.68rem;font-weight:700;letter-spacing:.15em;white-space:nowrap}
+.header-name span{color:#94a69a}
+main{padding:7px 0 40px}
+.experience{border:1px solid #39443d;background:#111713}
+.stage{position:relative;aspect-ratio:1248/720;overflow:hidden;background:#151d20}
+.stage video,.stage img{display:block;width:100%;height:100%;object-fit:contain}
+.stage img{position:absolute;inset:0}
+.stage-mark{position:absolute;left:24px;top:22px;padding:8px 10px;background:#0b1716a6;border:1px solid #ffffff40;color:#edf5ee;font-size:.64rem;font-weight:700;letter-spacing:.16em}
+.start-button{position:absolute;left:50%;bottom:8%;transform:translateX(-50%);display:flex;align-items:center;gap:13px;padding:13px 21px;background:#e7f2e7;color:#132017;border:1px solid #e7f2e7;font-size:.76rem;font-weight:800;letter-spacing:.12em;white-space:nowrap}
+.start-button:hover{background:#fff}
+.start-button span{font-size:.85rem;letter-spacing:0}
+.control-rail{min-height:76px;display:flex;align-items:center;gap:18px;padding:13px 20px;border-top:1px solid #39443d}
+.phase{display:flex;align-items:center;gap:18px;margin-right:auto;min-width:0}
+.phase span{color:#bedac1;font-size:.7rem;font-weight:700;letter-spacing:.14em;white-space:nowrap}
+.phase strong{font-size:.94rem;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.branch-options{display:flex;gap:7px}
+.branch-options button,.choose-again{min-height:43px;display:flex;align-items:center;gap:9px;padding:7px 13px;border:1px solid #627768;background:#1d3023;color:#edf8ef;font-size:.72rem;font-weight:700;letter-spacing:.12em;white-space:nowrap}
+.branch-options button:hover,.choose-again:hover{background:#304735;border-color:#d5efd8}
+.branch-options kbd{display:grid;place-items:center;width:25px;height:25px;border:1px solid #7c9d83;color:#dbebdc;font:700 .72rem/1 'Avenir Next','Helvetica Neue',Arial,sans-serif}
+.choose-again span{font-size:1rem}
+.reset-button{flex:none;width:43px;height:43px;border:1px solid #45554a;background:transparent;color:#c8d9cc;font-size:1.3rem}
+.reset-button:hover{border-color:#d5efd8;color:#fff}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:700px){.page{width:min(100% - 20px,1180px)}.header{height:58px}.brand img{width:113px}.header-name{font-size:.58rem;letter-spacing:.08em}.header-name span{display:none}.stage-mark{top:11px;left:11px;font-size:.52rem;padding:6px}.start-button{bottom:7%;padding:10px 14px;font-size:.65rem}.control-rail{padding:11px;gap:9px;flex-wrap:wrap}.phase{width:calc(100% - 53px);gap:11px}.phase strong{font-size:.82rem}.branch-options{order:3;width:100%;gap:6px}.branch-options button{flex:1;justify-content:center;padding:6px 5px;font-size:.62rem;gap:5px}.branch-options kbd{width:21px;height:21px;font-size:.65rem}.choose-again{order:3;width:100%;justify-content:center}.reset-button{margin-left:auto;width:38px;height:38px}}

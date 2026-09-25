@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#090c12" />
+    <title>Residential Street — ENUMA</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <a class="brand" href="../../" aria-label="Back to ENUMA">ENUMA<span class="brand-dot">.</span></a>
+        <span class="header-name">RESIDENTIAL STREET <span>/ INTERACTIVE</span></span>
+      </header>
+      <main>
+        <section class="experience" aria-label="Three-turn residential street interactive video">
+          <div class="video-stage" id="video-stage" data-stage="0" data-mode="waiting">
+            <video id="demo-video" preload="auto" playsinline poster="cue_1.jpg"
+              aria-label="Residential street changing from summer to winter and northern lights">
+              <source src="assets/residential-street.mp4" type="video/mp4" />
+              Your browser does not support HTML video.
+            </video>
+          </div>
+          <div class="controls">
+            <div class="step">
+              <span id="step-number" class="step-number">01 / 03</span>
+              <span id="step-label" class="step-label">Move down the street</span>
+            </div>
+            <div class="actions">
+              <button id="continue-button" class="action-button" type="button" aria-label="Move down the street">
+                <kbd id="action-key">W</kbd>
+                <span id="action-label">MOVE</span>
+                <span class="action-arrow" aria-hidden="true">↗</span>
+              </button>
+              <button id="reset-button" class="reset-button" type="button" aria-label="Restart experience" title="Restart">↺</button>
+            </div>
+          </div>
+        </section>
+        <div class="timeline" role="group" aria-label="Jump to an interaction turn">
+          <button class="timeline-step is-current" type="button" data-chapter="0" aria-label="Play turn 1: Move down the street" aria-current="step"><span class="timeline-bar"><span></span></span><span>01</span></button>
+          <button class="timeline-step" type="button" data-chapter="1" aria-label="Play turn 2: Bring on winter"><span class="timeline-bar"><span></span></span><span>02</span></button>
+          <button class="timeline-step" type="button" data-chapter="2" aria-label="Play turn 3: Light the sky"><span class="timeline-bar"><span></span></span><span>03</span></button>
+        </div>
+        <p id="announcer" class="sr-only" aria-live="polite"></p>
+      </main>
+    </div>
+    <script id="chapter-data" type="application/json">
+[
+  {
+    "start": 0,
+    "end": 8.0625,
+    "label": "Move down the street",
+    "action": "MOVE",
+    "key": "W"
+  },
+  {
+    "start": 8.0625,
+    "end": 16.125,
+    "label": "Bring on winter",
+    "action": "WINTER",
+    "key": "E"
+  },
+  {
+    "start": 16.125,
+    "end": 24.1875,
+    "label": "Light the sky",
+    "action": "AURORA",
+    "key": "E"
+  }
+]
+    </script>
+  </body>
+</html>

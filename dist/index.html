@@ -1,58 +1,581 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ENUMA — Worlds, in your hands.</title>
-  <meta name="description" content="ENUMA unifies camera, language, and visual controls for interactive world modeling. Explore selected research demos.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Watch the ENUMA research demo, explore six interactive stories, and see five model capabilities.">
   <meta name="theme-color" content="#07090b">
-  <link rel="icon" href="assets/enuma_favicon_64.png"><link rel="stylesheet" href="styles.css">
+  <title>ENUMA — Enter the world.</title>
+  <link rel="icon" href="assets/enuma_favicon_64.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="home.css">
 </head>
-<body>
-  <a class="skip" href="#capabilities">Skip to capabilities</a>
-  <header class="header"><a class="brand" href="#" aria-label="ENUMA home"><img src="assets/enuma_logo_white.svg" alt="ENUMA" width="165" height="33"></a><nav aria-label="Main navigation"><a href="#capabilities">Capabilities</a><a href="#research">Research</a><a href="benchmark/">Benchmark</a></nav><span class="concept-label">RESEARCH PREVIEW</span></header>
-  <main>
-    <section class="hero" aria-labelledby="hero-title">
-      <video class="hero-video" id="hero-video" poster="assets/world.jpg" autoplay muted loop playsinline preload="metadata"><source src="assets/world.mp4" type="video/mp4"></video>
-      <div class="hero-shade"></div><div class="hero-rule"></div>
-      <div class="hero-content"><p class="eyebrow">INTRODUCING ENUMA <span>/</span> INTERACTIVE WORLD MODEL</p><h1 id="hero-title">Worlds,<br>in your <em>hands.</em></h1><a class="hero-paper" href="#research" aria-label="Read the ENUMA paper abstract"><span class="small-label">THE PAPER <span aria-hidden="true">↗</span></span><span class="hero-paper-title"><strong>ENUMA:</strong> Unifying Camera, Language, and Visual Controls for Interactive World Modeling</span></a><a class="button light" href="#capabilities">Explore the capabilities <span aria-hidden="true">↗</span></a></div>
-      <div class="hero-bottom"><span>CAMERA × LANGUAGE × VISION</span><button id="hero-pause" aria-label="Pause background video">Ⅱ <span>Pause motion</span></button><span class="recorded">PRE-RECORDED MODEL OUTPUT</span></div>
-    </section>
-    <section class="intro section" id="capabilities">
-      <p class="eyebrow">01 / A UNIFIED INTERFACE</p>
-      <div class="section-heading"><h2>A world that follows<br>your imagination.</h2><p>ENUMA brings camera trajectories, language events, and visual references into a single interactive world model.</p></div>
-      <div class="capability-tabs" role="tablist" aria-label="Explore model controls">
-        <button role="tab" aria-selected="true" aria-controls="demo-panel" id="tab-camera" data-mode="camera"><span>01</span> Camera <span class="tab-plus" aria-hidden="true">↗</span></button>
-        <button role="tab" aria-selected="false" aria-controls="demo-panel" id="tab-language" data-mode="language" tabindex="-1"><span>02</span> Language <span class="tab-plus" aria-hidden="true">↗</span></button>
-        <button role="tab" aria-selected="false" aria-controls="demo-panel" id="tab-reference" data-mode="reference" tabindex="-1"><span>03</span> Visual reference <span class="tab-plus" aria-hidden="true">↗</span></button>
+<body class="home-page">
+  <a class="skip" href="#demo">Skip to the demo</a>
+  <header class="header">
+    <a class="brand" href="#top" aria-label="ENUMA home"><img src="assets/enuma_logo_white.svg" alt="ENUMA" width="165" height="33"></a>
+    <nav aria-label="Main navigation">
+      <a href="#demo">Demo</a>
+      <a href="#interactive">Interactive</a>
+      <a href="#ref2vid">Capabilities</a>
+      <a href="#research">Paper</a>
+      <a href="benchmark/">Benchmark</a>
+    </nav>
+  </header>
+  <main id="top">
+    <section class="home-hero" aria-labelledby="hero-title">
+      <video id="hero-video" class="home-hero-video is-active" src="assets/world.mp4" muted playsinline preload="auto" poster="assets/world.jpg" aria-hidden="true"></video>
+      <video id="hero-video-next" class="home-hero-video" muted playsinline preload="auto" aria-hidden="true"></video>
+      <img id="hero-final-frame" class="home-hero-final-frame" src="assets/hero-teaser-mosaic.jpg" alt="" aria-hidden="true">
+      <div class="home-hero-shade"></div>
+      <div class="home-hero-content">
+        <span class="home-kicker">INTERACTIVE WORLD MODEL</span>
+        <h1 id="hero-title">ENUMA<span>.</span></h1>
+        <p>One world. Many ways to steer it.</p>
+        <div class="home-hero-actions">
+          <a class="home-primary" href="#demo">Watch the demo <span aria-hidden="true">↗</span></a>
+          <a class="home-secondary" href="#interactive">Enter a world <span aria-hidden="true">↓</span></a>
+        </div>
       </div>
-      <div class="demo" id="demo-panel" role="tabpanel" aria-labelledby="tab-camera" tabindex="0">
-        <div class="demo-visual"><video id="demo-video" controls muted loop playsinline preload="none" poster="assets/world.jpg" aria-label="Camera control research demonstration"><source src="assets/world.mp4" type="video/mp4"></video><span class="video-label">ENUMA / MODEL OUTPUT</span></div>
-        <div class="demo-caption"><div><span class="small-label" id="mode-label">CAMERA TRAJECTORY</span><h3 id="mode-title">Choose where the world takes you.</h3><p id="mode-description">Camera trajectories guide viewpoint motion through the generated world. Follow the character into a vast ringworld.</p></div><div class="control-preview" id="control-preview"><span class="small-label">SELECTED DEMONSTRATION</span><div class="control-value"><span class="control-icon" aria-hidden="true">↗</span> Forward exploration</div><span class="control-detail">Ringworld / camera-conditioned rollout</span></div></div>
-      </div>
-      <p class="media-note">Pre-recorded research outputs. Selecting a control changes the sample; this page does not run live inference.</p>
-    </section>
-    <section class="worlds section" id="worlds">
-      <p class="eyebrow">02 / REIMAGINE THE SETTING</p><div class="section-heading"><h2>One character.<br>Entirely different worlds.</h2><p>From monumental architecture to an ink-painted landscape, explore the visual range of reference-conditioned generation.</p></div>
-      <div class="world-grid">
-        <button class="world-card" data-world="world" aria-label="Play Ringworld demonstration"><div class="world-image"><img src="assets/world.jpg" alt="An armored character in a futuristic ringworld" loading="lazy" width="1248" height="720"><span class="round-play" aria-hidden="true">▶</span></div><div class="world-meta"><h3>Beyond the horizon</h3><span>01 / RINGWORLD</span></div></button>
-        <button class="world-card" data-world="desert" aria-label="Play Desert temple demonstration"><div class="world-image"><img src="assets/desert.jpg" alt="The armored character approaching a sandstone temple" loading="lazy" width="1248" height="720"><span class="round-play" aria-hidden="true">▶</span></div><div class="world-meta"><h3>A world unearthed</h3><span>02 / DESERT TEMPLE</span></div></button>
-        <button class="world-card" data-world="ink" aria-label="Play Ink landscape demonstration"><div class="world-image"><img src="assets/ink.jpg" alt="The armored character in a flowing ink-painting landscape" loading="lazy" width="1248" height="720"><span class="round-play" aria-hidden="true">▶</span></div><div class="world-meta"><h3>Reality, reinterpreted</h3><span>03 / INK LANDSCAPE</span></div></button>
+      <div class="home-hero-bottom">
+        <span>CAMERA <i>×</i> LANGUAGE <i>×</i> VISUAL REFERENCE</span>
+        <div class="home-hero-controls"><span id="hero-count" aria-hidden="true">01 / 08</span><button id="hero-pause" type="button" aria-label="Pause background video">Ⅱ <span>Pause motion</span></button></div>
       </div>
     </section>
-    <section class="interaction section" id="interaction">
-      <div class="interaction-copy"><p class="eyebrow">03 / SHAPE WHAT HAPPENS NEXT</p><h2>Small actions.<br>Different futures.</h2><p>Go beyond looking around. Object interactions let user intent shape what happens inside the scene.</p><div class="action-picker" aria-label="Choose an object interaction"><button class="selected" aria-pressed="true" data-action="pat">Pat</button><button aria-pressed="false" data-action="lift">Lift</button><button aria-pressed="false" data-action="drag">Drag</button></div><p class="action-caption" id="action-caption">Selected outcome: pat the cow.</p><span class="small-label">THREE PRE-RECORDED INTERACTION OUTCOMES</span></div>
-      <div class="interaction-visual"><video id="action-video" controls muted loop playsinline preload="none" poster="assets/pat.jpg" aria-label="Pat the cow research demonstration"><source src="assets/pat.mp4" type="video/mp4"></video><span class="video-label">OBJECT INTERACTION</span></div>
+
+    <section id="demo" class="home-section demo-feature" aria-labelledby="demo-title">
+      <div class="home-section-head">
+        <div><span class="home-index">01 / THE FILM</span><h2 id="demo-title">See ENUMA in motion.</h2></div>
+        <p>Full research demo · 1:46 · Silent</p>
+      </div>
+      <div class="demo-film-frame">
+        <video id="demo-film" playsinline preload="none" poster="assets/enuma-demo.jpg" data-src="assets/enuma-demo.mp4" aria-label="Full ENUMA research demo"></video>
+        <button id="demo-film-play" class="demo-film-play" type="button" aria-label="Play the full ENUMA demo"><span aria-hidden="true">▶</span> PLAY FILM</button>
+      </div>
     </section>
-    <section id="research" class="section research">
-      <p class="eyebrow">04 / BEHIND THE WORLDS</p><div class="section-heading"><h2>Many ways to interact.<br>One world model.</h2><p>Unified conditioning and Reference Forcing connect rich interactions with chunk-wise causal generation.</p></div>
-      <div class="research-stats"><div><span class="stat-number">3</span><p>Control modalities</p><span>Camera · Language · Visual reference</span></div><div><span class="stat-number">30<span>s</span></span><p>Causal generation, up to</p><span>Long-horizon adaptation</span></div><div><span class="stat-number">4<span> steps</span></span><p>Distilled generation</p><span>Few-step causal rollout</span></div></div>
-      <div class="method"><div class="method-heading"><span class="small-label">REFERENCE FORCING</span><p>From a bidirectional generator<br>to an interactive world.</p></div><ol class="method-flow"><li><span>01</span><h3>Unify the controls</h3><p>Dedicated conditioning for camera trajectories, language events, and visual references.</p></li><li><span>02</span><h3>Anchor the rollout</h3><p>Dynamic reference anchors and mixed forcing support chunk-wise causal generation.</p></li><li><span>03</span><h3>Distill to four steps</h3><p>Few-step distillation makes autoregressive rollout more efficient.</p></li></ol></div>
-      <details class="paper"><summary><div><span class="small-label">ENUMA / TECHNICAL REPORT</span><h3>Unifying Camera, Language, and Visual Controls<br>for Interactive World Modeling</h3></div><span class="abstract-toggle">Read abstract <span aria-hidden="true">+</span></span></summary><div class="paper-content"><p>Interactive world models are evolving beyond camera-controlled navigation toward richer forms of user interaction, yet existing systems typically support only a limited subset of control signals. We present ENUMA, a unified interactive world model that jointly supports camera trajectories, language events, and visual references. Starting from a pretrained bidirectional video generator, we introduce dedicated conditioning mechanisms for heterogeneous controls, together with an interaction-oriented data curation pipeline and multi-task reinforcement learning to improve control fidelity.</p><p>To enable autoregressive deployment, we further propose Reference Forcing, which adapts the bidirectional model to chunk-wise causal generation with dynamically updated reference anchors and mixed forcing, and subsequently distills it into a four-step generator for efficient rollout. ENUMA supports causal generation up to 30 seconds and is evaluated on established world-model benchmarks, our proposed ENUMA-Bench, and direct human preference comparisons. Our results highlight heterogeneous interaction interfaces as a promising direction toward more general and continuously controllable world models.</p><p class="authors">Zhoujie Fu · Qing Yan · Yizhi Song · Zichuan Liu · Hao Kang · Yumin Jia · Xinyao Liao · Junyi Chen · Zixin Zhu · Zhexiao Xiong · Stathi Fotiadis · Jenson Yang · Jiamin Yuan · Guosheng Lin · Xin Lu</p></div></details>
-      <div class="affiliations"><span>Nanyang Technological University</span><span>Intelligent Creation, ByteDance</span><span>Shanghai Jiao Tong University</span></div>
-      <a class="bench-link" href="benchmark/"><span><span class="small-label">ENUMA-BENCH</span>Explore the evaluation suite</span><span aria-hidden="true">↗</span></a>
+
+    <section id="interactive" class="home-section interactive-showcase" aria-labelledby="interactive-title">
+      <div class="home-section-head">
+        <div><span class="home-index">02 / INTERACTIVE WORLDS</span><h2 id="interactive-title">Choose the next move.</h2></div>
+        <p>Your move changes what happens next.</p>
+      </div>
+      <div class="journey-grid">
+        <a class="journey-card" href="interactive/obsidian-portal/index.html" aria-label="Enter Obsidian Portal interactive demo">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/portal-preview.jpg" data-src="assets/portal-preview.mp4" aria-hidden="true"></video>
+          <span class="journey-shade"></span>
+          <span class="journey-top">01 <span>FOUR TURNS</span></span>
+          <span class="journey-bottom"><strong>Obsidian Portal</strong><span>ENTER ↗</span></span>
+        </a>
+        <a class="journey-card" href="interactive/drawbridge-dragon/index.html" aria-label="Enter Drawbridge and Dragon interactive demo">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/dragon-preview.jpg" data-src="assets/dragon-preview.mp4" aria-hidden="true"></video>
+          <span class="journey-shade"></span>
+          <span class="journey-top">02 <span>FOUR TURNS</span></span>
+          <span class="journey-bottom"><strong>Drawbridge / Dragon</strong><span>ENTER ↗</span></span>
+        </a>
+        <a class="journey-card journey-card-branch" href="interactive/doll-cow/index.html" aria-label="Enter Plush Cow three-branch interactive demo">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/cow-event.jpg" data-src="assets/cow-event.mp4" aria-hidden="true"></video>
+          <span class="journey-shade"></span>
+          <span class="journey-top">03 <span>THREE BRANCHES</span></span>
+          <span class="journey-bottom"><strong>Plush Cow</strong><span>ENTER ↗</span></span>
+          <span class="journey-branch-actions">PAT <i>/</i> LIFT <i>/</i> DRAG</span>
+        </a>
+        <a class="journey-card" href="interactive/magic-fireball-brazier/index.html" aria-label="Enter Fireball and Brazier three-turn interactive demo">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/magic-fireball-preview.jpg" data-src="assets/magic-fireball-preview.mp4" aria-hidden="true"></video>
+          <span class="journey-shade"></span>
+          <span class="journey-top">04 <span>THREE TURNS</span></span>
+          <span class="journey-bottom"><strong>Fireball / Brazier</strong><span>ENTER ↗</span></span>
+        </a>
+        <a class="journey-card" href="interactive/car-wash/index.html" aria-label="Enter Car Wash three-turn interactive demo">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/car-wash-preview.jpg" data-src="assets/car-wash-preview.mp4" aria-hidden="true"></video>
+          <span class="journey-shade"></span>
+          <span class="journey-top">05 <span>THREE TURNS</span></span>
+          <span class="journey-bottom"><strong>Car Wash</strong><span>ENTER ↗</span></span>
+        </a>
+        <a class="journey-card" href="interactive/residential-street/index.html" aria-label="Enter Residential Street three-turn interactive demo">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/street-preview.jpg" data-src="assets/street-preview.mp4" aria-hidden="true"></video>
+          <span class="journey-shade"></span>
+          <span class="journey-top">06 <span>THREE TURNS</span></span>
+          <span class="journey-bottom"><strong>Residential Street</strong><span>ENTER ↗</span></span>
+        </a>
+      </div>
     </section>
-  </main><footer><img src="assets/enuma_logo_white.svg" alt="ENUMA" width="142" height="29"><p>Interactive worlds. Unified.</p><span>RESEARCH WEBSITE CONCEPT / 2026</span></footer>
-  <dialog id="world-dialog" aria-labelledby="world-dialog-title"><div class="dialog-top"><h2 id="world-dialog-title">Beyond the horizon</h2><button id="close-dialog" aria-label="Close video">×</button></div><video id="world-video" controls muted loop playsinline preload="none"></video><p>ENUMA · Pre-recorded model output</p></dialog>
+
+    <nav class="capability-rail" aria-label="Model capabilities">
+      <span>EXPLORE CAPABILITIES</span>
+      <a href="#ref2vid">Ref2Vid</a><a href="#text-event">Text Event</a><a href="#ref-event">Ref Event</a><a href="#interaction">Interaction</a><a href="#embodied">Embodied</a>
+    </nav>
+
+    <section id="ref2vid" class="home-section capability-section" aria-labelledby="ref2vid-title">
+      <div class="home-section-head">
+        <div><span class="home-index">03 / REF2VID</span><h2 id="ref2vid-title">Build a world from references.</h2></div>
+        <p>Character + scene → controllable video.</p>
+      </div>
+      <div class="capability-subhead"><strong>LONG ROLLOUTS</strong><span>30 SECONDS / 08 CASES</span></div>
+      <div class="carousel-viewport" id="carousel-ref2vid-long" role="group" aria-roledescription="carousel" aria-label="30-second Ref2Vid cases" tabindex="0">
+        <div class="sample-card sample-card-with-refs">
+          <button class="sample-play" type="button" data-video="ref2vid-0264" data-title="Azure Wyvern" aria-label="Play Azure Wyvern Ref2Vid output, 30 seconds">
+            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-0264.jpg" data-src="assets/ref2vid-0264-preview.mp4" aria-hidden="true"></video>
+            <span class="sample-caption"><small>30S ROLLOUT</small><strong>Azure Wyvern</strong><b aria-hidden="true">↗</b></span>
+          </button>
+          <div class="reference-inputs"><span>CHAR / SCENE</span>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-0264-1-full.jpg" data-reference-label="Character reference" aria-label="Enlarge character reference for Azure Wyvern"><img src="assets/ref2vid-0264-1.jpg" alt="" loading="lazy"></button>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-0264-2-full.jpg" data-reference-label="Scene reference" aria-label="Enlarge scene reference for Azure Wyvern"><img src="assets/ref2vid-0264-2.jpg" alt="" loading="lazy"></button>
+          </div>
+        </div>
+        <div class="sample-card sample-card-with-refs">
+          <button class="sample-play" type="button" data-video="ref2vid-0412" data-title="Alpine Ride" aria-label="Play Alpine Ride Ref2Vid output, 30 seconds">
+            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-0412.jpg" data-src="assets/ref2vid-0412-preview.mp4" aria-hidden="true"></video>
+            <span class="sample-caption"><small>30S ROLLOUT</small><strong>Alpine Ride</strong><b aria-hidden="true">↗</b></span>
+          </button>
+          <div class="reference-inputs"><span>CHAR / SCENE</span>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-0412-1-full.jpg" data-reference-label="Character reference" aria-label="Enlarge character reference for Alpine Ride"><img src="assets/ref2vid-0412-1.jpg" alt="" loading="lazy"></button>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-0412-2-full.jpg" data-reference-label="Scene reference" aria-label="Enlarge scene reference for Alpine Ride"><img src="assets/ref2vid-0412-2.jpg" alt="" loading="lazy"></button>
+          </div>
+        </div>
+        <div class="sample-card sample-card-with-refs">
+          <button class="sample-play" type="button" data-video="ref2vid-0256" data-title="Lunar Rescue" aria-label="Play Lunar Rescue Ref2Vid output, 30 seconds">
+            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-0256.jpg" data-src="assets/ref2vid-0256-preview.mp4" aria-hidden="true"></video>
+            <span class="sample-caption"><small>30S ROLLOUT</small><strong>Lunar Rescue</strong><b aria-hidden="true">↗</b></span>
+          </button>
+          <div class="reference-inputs"><span>CHAR / SCENE</span>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-0256-1-full.jpg" data-reference-label="Character reference" aria-label="Enlarge character reference for Lunar Rescue"><img src="assets/ref2vid-0256-1.jpg" alt="" loading="lazy"></button>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-0256-2-full.jpg" data-reference-label="Scene reference" aria-label="Enlarge scene reference for Lunar Rescue"><img src="assets/ref2vid-0256-2.jpg" alt="" loading="lazy"></button>
+          </div>
+        </div>
+        <div class="sample-card sample-card-with-refs">
+          <button class="sample-play" type="button" data-video="ref2vid-0243" data-title="Bison / Savanna" aria-label="Play Bison / Savanna Ref2Vid output, 30 seconds">
+            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-0243.jpg" data-src="assets/ref2vid-0243-preview.mp4" aria-hidden="true"></video>
+            <span class="sample-caption"><small>30S ROLLOUT</small><strong>Bison / Savanna</strong><b aria-hidden="true">↗</b></span>
+          </button>
+          <div class="reference-inputs"><span>CHAR / SCENE</span>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-0243-1-full.jpg" data-reference-label="Character reference" aria-label="Enlarge character reference for Bison / Savanna"><img src="assets/ref2vid-0243-1.jpg" alt="" loading="lazy"></button>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-0243-2-full.jpg" data-reference-label="Scene reference" aria-label="Enlarge scene reference for Bison / Savanna"><img src="assets/ref2vid-0243-2.jpg" alt="" loading="lazy"></button>
+          </div>
+        </div>
+        <div class="sample-card sample-card-with-refs">
+          <button class="sample-play" type="button" data-video="ref2vid-0825" data-title="Crystal Desert Flight" aria-label="Play Crystal Desert Flight Ref2Vid output, 30 seconds">
+            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-0825.jpg" data-src="assets/ref2vid-0825-preview.mp4" aria-hidden="true"></video>
+            <span class="sample-caption"><small>30S ROLLOUT</small><strong>Crystal Desert Flight</strong><b aria-hidden="true">↗</b></span>
+          </button>
+          <div class="reference-inputs"><span>CHAR / SCENE</span>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-0825-1-full.jpg" data-reference-label="Character reference" aria-label="Enlarge character reference for Crystal Desert Flight"><img src="assets/ref2vid-0825-1.jpg" alt="" loading="lazy"></button>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-0825-2-full.jpg" data-reference-label="Scene reference" aria-label="Enlarge scene reference for Crystal Desert Flight"><img src="assets/ref2vid-0825-2.jpg" alt="" loading="lazy"></button>
+          </div>
+        </div>
+        <div class="sample-card sample-card-with-refs">
+          <button class="sample-play" type="button" data-video="ref2vid-0679" data-title="Copper Stag" aria-label="Play Copper Stag Ref2Vid output, 30 seconds">
+            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-0679.jpg" data-src="assets/ref2vid-0679-preview.mp4" aria-hidden="true"></video>
+            <span class="sample-caption"><small>30S ROLLOUT</small><strong>Copper Stag</strong><b aria-hidden="true">↗</b></span>
+          </button>
+          <div class="reference-inputs"><span>CHAR / SCENE</span>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-0679-1-full.jpg" data-reference-label="Character reference" aria-label="Enlarge character reference for Copper Stag"><img src="assets/ref2vid-0679-1.jpg" alt="" loading="lazy"></button>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-0679-2-full.jpg" data-reference-label="Scene reference" aria-label="Enlarge scene reference for Copper Stag"><img src="assets/ref2vid-0679-2.jpg" alt="" loading="lazy"></button>
+          </div>
+        </div>
+        <div class="sample-card sample-card-with-refs">
+          <button class="sample-play" type="button" data-video="ref2vid-0757" data-title="Coastal Cartographer" aria-label="Play Coastal Cartographer Ref2Vid output, 30 seconds">
+            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-0757.jpg" data-src="assets/ref2vid-0757-preview.mp4" aria-hidden="true"></video>
+            <span class="sample-caption"><small>30S ROLLOUT</small><strong>Coastal Cartographer</strong><b aria-hidden="true">↗</b></span>
+          </button>
+          <div class="reference-inputs"><span>CHAR / SCENE</span>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-0757-1-full.jpg" data-reference-label="Character reference" aria-label="Enlarge character reference for Coastal Cartographer"><img src="assets/ref2vid-0757-1.jpg" alt="" loading="lazy"></button>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-0757-2-full.jpg" data-reference-label="Scene reference" aria-label="Enlarge scene reference for Coastal Cartographer"><img src="assets/ref2vid-0757-2.jpg" alt="" loading="lazy"></button>
+          </div>
+        </div>
+        <div class="sample-card sample-card-with-refs">
+          <button class="sample-play" type="button" data-video="ref2vid-0988" data-title="Floating Islands" aria-label="Play Floating Islands Ref2Vid output, 30 seconds">
+            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-0988.jpg" data-src="assets/ref2vid-0988-preview.mp4" aria-hidden="true"></video>
+            <span class="sample-caption"><small>30S ROLLOUT</small><strong>Floating Islands</strong><b aria-hidden="true">↗</b></span>
+          </button>
+          <div class="reference-inputs"><span>CHAR / SCENE</span>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-0988-1-full.jpg" data-reference-label="Character reference" aria-label="Enlarge character reference for Floating Islands"><img src="assets/ref2vid-0988-1.jpg" alt="" loading="lazy"></button>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-0988-2-full.jpg" data-reference-label="Scene reference" aria-label="Enlarge scene reference for Floating Islands"><img src="assets/ref2vid-0988-2.jpg" alt="" loading="lazy"></button>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-footer" aria-controls="carousel-ref2vid-long">
+        <div class="carousel-progress" aria-hidden="true"><span></span></div>
+        <span class="carousel-count">01 / 08</span>
+        <div class="carousel-arrows">
+          <button type="button" data-slide="-1" aria-label="Previous 30-second Ref2Vid cases">←</button>
+          <button type="button" data-slide="1" aria-label="Next 30-second Ref2Vid cases">→</button>
+        </div>
+      </div>
+      <div class="capability-subhead capability-subhead-secondary"><strong>MORE WORLDS</strong><span>8 SECONDS / 08 CASES</span></div>
+      <div class="carousel-viewport" id="carousel-ref2vid-short" role="group" aria-roledescription="carousel" aria-label="8-second Ref2Vid cases" tabindex="0">
+        <div class="sample-card sample-card-with-refs">
+          <button class="sample-play" type="button" data-video="ref2vid-01" data-title="Crystal Frontier" aria-label="Play Crystal Frontier Ref2Vid output, 8 seconds">
+            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-01.jpg" data-src="assets/ref2vid-01.mp4" aria-hidden="true"></video>
+            <span class="sample-caption"><small>8S WORLD</small><strong>Crystal Frontier</strong><b aria-hidden="true">↗</b></span>
+          </button>
+          <div class="reference-inputs"><span>CHAR / SCENE</span>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-01-1-full.jpg" data-reference-label="Character reference" aria-label="Enlarge character reference for Crystal Frontier"><img src="assets/ref2vid-01-1.jpg" alt="" loading="lazy"></button>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-01-2-full.jpg" data-reference-label="Scene reference" aria-label="Enlarge scene reference for Crystal Frontier"><img src="assets/ref2vid-01-2.jpg" alt="" loading="lazy"></button>
+          </div>
+        </div>
+        <div class="sample-card sample-card-with-refs">
+          <button class="sample-play" type="button" data-video="ref2vid-02" data-title="Forest Sentinel" aria-label="Play Forest Sentinel Ref2Vid output, 8 seconds">
+            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-02.jpg" data-src="assets/ref2vid-02.mp4" aria-hidden="true"></video>
+            <span class="sample-caption"><small>8S WORLD</small><strong>Forest Sentinel</strong><b aria-hidden="true">↗</b></span>
+          </button>
+          <div class="reference-inputs"><span>CHAR / SCENE</span>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-02-1-full.jpg" data-reference-label="Character reference" aria-label="Enlarge character reference for Forest Sentinel"><img src="assets/ref2vid-02-1.jpg" alt="" loading="lazy"></button>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-02-2-full.jpg" data-reference-label="Scene reference" aria-label="Enlarge scene reference for Forest Sentinel"><img src="assets/ref2vid-02-2.jpg" alt="" loading="lazy"></button>
+          </div>
+        </div>
+        <div class="sample-card sample-card-with-refs">
+          <button class="sample-play" type="button" data-video="ref2vid-05" data-title="Desert Wayfinder" aria-label="Play Desert Wayfinder Ref2Vid output, 8 seconds">
+            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-05.jpg" data-src="assets/ref2vid-05.mp4" aria-hidden="true"></video>
+            <span class="sample-caption"><small>8S WORLD</small><strong>Desert Wayfinder</strong><b aria-hidden="true">↗</b></span>
+          </button>
+          <div class="reference-inputs"><span>CHAR / SCENE</span>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-05-1-full.jpg" data-reference-label="Character reference" aria-label="Enlarge character reference for Desert Wayfinder"><img src="assets/ref2vid-05-1.jpg" alt="" loading="lazy"></button>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-05-2-full.jpg" data-reference-label="Scene reference" aria-label="Enlarge scene reference for Desert Wayfinder"><img src="assets/ref2vid-05-2.jpg" alt="" loading="lazy"></button>
+          </div>
+        </div>
+        <div class="sample-card sample-card-with-refs">
+          <button class="sample-play" type="button" data-video="ref2vid-07" data-title="Ashen City" aria-label="Play Ashen City Ref2Vid output, 8 seconds">
+            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-07.jpg" data-src="assets/ref2vid-07.mp4" aria-hidden="true"></video>
+            <span class="sample-caption"><small>8S WORLD</small><strong>Ashen City</strong><b aria-hidden="true">↗</b></span>
+          </button>
+          <div class="reference-inputs"><span>CHAR / SCENE</span>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-07-1-full.jpg" data-reference-label="Character reference" aria-label="Enlarge character reference for Ashen City"><img src="assets/ref2vid-07-1.jpg" alt="" loading="lazy"></button>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-07-2-full.jpg" data-reference-label="Scene reference" aria-label="Enlarge scene reference for Ashen City"><img src="assets/ref2vid-07-2.jpg" alt="" loading="lazy"></button>
+          </div>
+        </div>
+        <div class="sample-card sample-card-with-refs">
+          <button class="sample-play" type="button" data-video="ref2vid-08" data-title="Countryside Path" aria-label="Play Countryside Path Ref2Vid output, 8 seconds">
+            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-08.jpg" data-src="assets/ref2vid-08.mp4" aria-hidden="true"></video>
+            <span class="sample-caption"><small>8S WORLD</small><strong>Countryside Path</strong><b aria-hidden="true">↗</b></span>
+          </button>
+          <div class="reference-inputs"><span>CHAR / SCENE</span>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-08-1-full.jpg" data-reference-label="Character reference" aria-label="Enlarge character reference for Countryside Path"><img src="assets/ref2vid-08-1.jpg" alt="" loading="lazy"></button>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-08-2-full.jpg" data-reference-label="Scene reference" aria-label="Enlarge scene reference for Countryside Path"><img src="assets/ref2vid-08-2.jpg" alt="" loading="lazy"></button>
+          </div>
+        </div>
+        <div class="sample-card sample-card-with-refs">
+          <button class="sample-play" type="button" data-video="ref2vid-15" data-title="Ember Bridge" aria-label="Play Ember Bridge Ref2Vid output, 8 seconds">
+            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-15.jpg" data-src="assets/ref2vid-15.mp4" aria-hidden="true"></video>
+            <span class="sample-caption"><small>8S WORLD</small><strong>Ember Bridge</strong><b aria-hidden="true">↗</b></span>
+          </button>
+          <div class="reference-inputs"><span>CHAR / SCENE</span>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-15-1-full.jpg" data-reference-label="Character reference" aria-label="Enlarge character reference for Ember Bridge"><img src="assets/ref2vid-15-1.jpg" alt="" loading="lazy"></button>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-15-2-full.jpg" data-reference-label="Scene reference" aria-label="Enlarge scene reference for Ember Bridge"><img src="assets/ref2vid-15-2.jpg" alt="" loading="lazy"></button>
+          </div>
+        </div>
+        <div class="sample-card sample-card-with-refs">
+          <button class="sample-play" type="button" data-video="ref2vid-16" data-title="Overgrown Streets" aria-label="Play Overgrown Streets Ref2Vid output, 8 seconds">
+            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-16.jpg" data-src="assets/ref2vid-16.mp4" aria-hidden="true"></video>
+            <span class="sample-caption"><small>8S WORLD</small><strong>Overgrown Streets</strong><b aria-hidden="true">↗</b></span>
+          </button>
+          <div class="reference-inputs"><span>CHAR / SCENE</span>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-16-1-full.jpg" data-reference-label="Character reference" aria-label="Enlarge character reference for Overgrown Streets"><img src="assets/ref2vid-16-1.jpg" alt="" loading="lazy"></button>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-16-2-full.jpg" data-reference-label="Scene reference" aria-label="Enlarge scene reference for Overgrown Streets"><img src="assets/ref2vid-16-2.jpg" alt="" loading="lazy"></button>
+          </div>
+        </div>
+        <div class="sample-card sample-card-with-refs">
+          <button class="sample-play" type="button" data-video="ref2vid-19" data-title="Railway Crossing" aria-label="Play Railway Crossing Ref2Vid output, 8 seconds">
+            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ref2vid-19.jpg" data-src="assets/ref2vid-19.mp4" aria-hidden="true"></video>
+            <span class="sample-caption"><small>8S WORLD</small><strong>Railway Crossing</strong><b aria-hidden="true">↗</b></span>
+          </button>
+          <div class="reference-inputs"><span>CHAR / SCENE</span>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-19-1-full.jpg" data-reference-label="Character reference" aria-label="Enlarge character reference for Railway Crossing"><img src="assets/ref2vid-19-1.jpg" alt="" loading="lazy"></button>
+            <button class="reference-thumb" type="button" data-full-src="assets/ref2vid-19-2-full.jpg" data-reference-label="Scene reference" aria-label="Enlarge scene reference for Railway Crossing"><img src="assets/ref2vid-19-2.jpg" alt="" loading="lazy"></button>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-footer" aria-controls="carousel-ref2vid-short">
+        <div class="carousel-progress" aria-hidden="true"><span></span></div>
+        <span class="carousel-count">01 / 08</span>
+        <div class="carousel-arrows">
+          <button type="button" data-slide="-1" aria-label="Previous 8-second Ref2Vid cases">←</button>
+          <button type="button" data-slide="1" aria-label="Next 8-second Ref2Vid cases">→</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="text-event" class="home-section capability-section" aria-labelledby="text-event-title">
+      <div class="home-section-head">
+        <div><span class="home-index">04 / TEXT EVENT</span><h2 id="text-event-title">Say what happens.</h2></div>
+        <p>Language changes the world in motion.</p>
+      </div>
+      <div class="capability-subhead"><strong>LONG ROLLOUTS</strong><span>30 SECONDS / 08 CASES</span></div>
+      <div class="carousel-viewport" id="carousel-text-event-long" role="group" aria-roledescription="carousel" aria-label="30-second Text Event cases" tabindex="0">
+        <button class="sample-card" type="button" data-video="text-eclipse" data-title="Desert Eclipse" aria-label="Play Desert Eclipse Text Event output, 30 seconds">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/text-eclipse.jpg" data-src="assets/text-eclipse-preview.mp4" aria-hidden="true"></video>
+          <span class="sample-caption"><small>30S ROLLOUT</small><strong>Desert Eclipse</strong><b aria-hidden="true">↗</b></span>
+        </button>
+        <button class="sample-card" type="button" data-video="text-0152" data-title="Stone Giant at the Ruins" aria-label="Play Stone Giant at the Ruins Text Event output, 30 seconds">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/text-0152.jpg" data-src="assets/text-0152-preview.mp4" aria-hidden="true"></video>
+          <span class="sample-caption"><small>30S ROLLOUT</small><strong>Stone Giant</strong><b aria-hidden="true">↗</b></span>
+        </button>
+        <button class="sample-card" type="button" data-video="text-0558" data-title="Glacial Terrain" aria-label="Play Glacial Terrain Text Event output, 30 seconds">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/text-0558.jpg" data-src="assets/text-0558-preview.mp4" aria-hidden="true"></video>
+          <span class="sample-caption"><small>30S ROLLOUT</small><strong>Glacial Terrain</strong><b aria-hidden="true">↗</b></span>
+        </button>
+        <button class="sample-card" type="button" data-video="text-0584" data-title="Falling Stars" aria-label="Play Falling Stars Text Event output, 30 seconds">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/text-0584.jpg" data-src="assets/text-0584-preview.mp4" aria-hidden="true"></video>
+          <span class="sample-caption"><small>30S ROLLOUT</small><strong>Falling Stars</strong><b aria-hidden="true">↗</b></span>
+        </button>
+        <button class="sample-card" type="button" data-video="text-0601" data-title="Storm at the Observatory" aria-label="Play Storm at the Observatory Text Event output, 30 seconds">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/text-0601.jpg" data-src="assets/text-0601-preview.mp4" aria-hidden="true"></video>
+          <span class="sample-caption"><small>30S ROLLOUT</small><strong>Observatory Storm</strong><b aria-hidden="true">↗</b></span>
+        </button>
+        <button class="sample-card" type="button" data-video="text-0627" data-title="Wetland Sunburst" aria-label="Play Wetland Sunburst Text Event output, 30 seconds">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/text-0627.jpg" data-src="assets/text-0627-preview.mp4" aria-hidden="true"></video>
+          <span class="sample-caption"><small>30S ROLLOUT</small><strong>Wetland Sunburst</strong><b aria-hidden="true">↗</b></span>
+        </button>
+        <button class="sample-card" type="button" data-video="text-spire" data-title="Rising Mountain" aria-label="Play Rising Mountain Text Event output, 30 seconds">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/text-spire.jpg" data-src="assets/text-spire-preview.mp4" aria-hidden="true"></video>
+          <span class="sample-caption"><small>30S ROLLOUT</small><strong>Rising Mountain</strong><b aria-hidden="true">↗</b></span>
+        </button>
+        <button class="sample-card" type="button" data-video="text-0131" data-title="Illustrated World" aria-label="Play Illustrated World Text Event output, 30 seconds">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/text-0131.jpg" data-src="assets/text-0131-preview.mp4" aria-hidden="true"></video>
+          <span class="sample-caption"><small>30S ROLLOUT</small><strong>Illustrated World</strong><b aria-hidden="true">↗</b></span>
+        </button>
+      </div>
+      <div class="carousel-footer" aria-controls="carousel-text-event-long">
+        <div class="carousel-progress" aria-hidden="true"><span></span></div>
+        <span class="carousel-count">01 / 08</span>
+        <div class="carousel-arrows">
+          <button type="button" data-slide="-1" aria-label="Previous 30-second Text Event cases">←</button>
+          <button type="button" data-slide="1" aria-label="Next 30-second Text Event cases">→</button>
+        </div>
+      </div>
+      <div class="capability-subhead capability-subhead-secondary"><strong>MORE EVENTS</strong><span>8 SECONDS / 08 CASES</span></div>
+      <div class="carousel-viewport" id="carousel-text-event-short" role="group" aria-roledescription="carousel" aria-label="8-second Text Event cases" tabindex="0">
+        <button class="sample-card" type="button" data-video="text-short-stained-glass" data-title="Stained Glass World" aria-label="Play Stained Glass World Text Event output, 8 seconds">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/text-short-stained-glass.jpg" data-src="assets/text-short-stained-glass.mp4" aria-hidden="true"></video>
+          <span class="sample-caption"><small>8S ROLLOUT</small><strong>Stained Glass</strong><b aria-hidden="true">↗</b></span>
+        </button>
+        <button class="sample-card" type="button" data-video="text-short-lighthouse-meteor" data-title="Lighthouse Meteor" aria-label="Play Lighthouse Meteor Text Event output, 8 seconds">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/text-short-lighthouse-meteor.jpg" data-src="assets/text-short-lighthouse-meteor.mp4" aria-hidden="true"></video>
+          <span class="sample-caption"><small>8S ROLLOUT</small><strong>Lighthouse Meteor</strong><b aria-hidden="true">↗</b></span>
+        </button>
+        <button class="sample-card" type="button" data-video="text-short-embroidered" data-title="Embroidered World" aria-label="Play Embroidered World Text Event output, 8 seconds">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/text-short-embroidered.jpg" data-src="assets/text-short-embroidered.mp4" aria-hidden="true"></video>
+          <span class="sample-caption"><small>8S ROLLOUT</small><strong>Embroidered World</strong><b aria-hidden="true">↗</b></span>
+        </button>
+        <button class="sample-card" type="button" data-video="text-short-xianxia-crane" data-title="Xianxia Crane Flight" aria-label="Play Xianxia Crane Flight Text Event output, 8 seconds">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/text-short-xianxia-crane.jpg" data-src="assets/text-short-xianxia-crane.mp4" aria-hidden="true"></video>
+          <span class="sample-caption"><small>8S ROLLOUT</small><strong>Crane Flight</strong><b aria-hidden="true">↗</b></span>
+        </button>
+        <button class="sample-card" type="button" data-video="ice-lava" data-title="Ice to Lava" aria-label="Play Ice to Lava Text Event output, 8 seconds">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/ice-lava.jpg" data-src="assets/ice-lava.mp4" aria-hidden="true"></video>
+          <span class="sample-caption"><small>8S ROLLOUT</small><strong>Ice → Lava</strong><b aria-hidden="true">↗</b></span>
+        </button>
+        <button class="sample-card" type="button" data-video="text-short-karst-beacon" data-title="Golden Beacon" aria-label="Play Golden Beacon Text Event output, 8 seconds">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/text-short-karst-beacon.jpg" data-src="assets/text-short-karst-beacon.mp4" aria-hidden="true"></video>
+          <span class="sample-caption"><small>8S ROLLOUT</small><strong>Golden Beacon</strong><b aria-hidden="true">↗</b></span>
+        </button>
+        <button class="sample-card" type="button" data-video="road-sandstorm" data-title="Sandstorm" aria-label="Play Sandstorm Text Event output, 8 seconds">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/road-sandstorm.jpg" data-src="assets/road-sandstorm.mp4" aria-hidden="true"></video>
+          <span class="sample-caption"><small>8S ROLLOUT</small><strong>Sandstorm</strong><b aria-hidden="true">↗</b></span>
+        </button>
+        <button class="sample-card" type="button" data-video="palace-neon" data-title="Palace to Cyberpunk" aria-label="Play Palace to Cyberpunk Text Event output, 8 seconds">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/palace-neon.jpg" data-src="assets/palace-neon.mp4" aria-hidden="true"></video>
+          <span class="sample-caption"><small>8S ROLLOUT</small><strong>Palace → Cyberpunk</strong><b aria-hidden="true">↗</b></span>
+        </button>
+      </div>
+      <div class="carousel-footer" aria-controls="carousel-text-event-short">
+        <div class="carousel-progress" aria-hidden="true"><span></span></div>
+        <span class="carousel-count">01 / 08</span>
+        <div class="carousel-arrows">
+          <button type="button" data-slide="-1" aria-label="Previous 8-second Text Event cases">←</button>
+          <button type="button" data-slide="1" aria-label="Next 8-second Text Event cases">→</button>
+        </div>
+      </div>
+    </section>
+    <section id="ref-event" class="home-section capability-section" aria-labelledby="ref-event-title">
+      <div class="home-section-head">
+        <div><span class="home-index">05 / REF EVENT</span><h2 id="ref-event-title">Show what enters the scene.</h2></div>
+        <p>Starting frame + event reference → video.</p>
+      </div>
+      <div class="carousel-viewport" id="carousel-ref-event" role="group" aria-roledescription="carousel" aria-label="Ref Event cases" tabindex="0">
+        <div class="sample-card sample-card-with-refs">
+          <button class="sample-play" type="button" data-video="refevent-new-01" data-title="Meadow Knight" aria-label="Play Meadow Knight Ref Event output">
+            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/refevent-new-01.jpg" data-src="assets/refevent-new-01.mp4" aria-hidden="true"></video>
+            <span class="sample-caption"><small>REF EVENT</small><strong>Meadow Knight</strong><b aria-hidden="true">↗</b></span>
+          </button>
+          <div class="reference-inputs"><span>START / EVENT</span>
+            <button class="reference-thumb" type="button" data-full-src="assets/refevent-new-01-start-full.jpg" data-reference-label="Start frame" aria-label="Enlarge start frame for Meadow Knight"><img src="assets/refevent-new-01-start.jpg" alt="" loading="lazy"></button>
+            <button class="reference-thumb" type="button" data-full-src="assets/refevent-new-01-reference-full.jpg" data-reference-label="Event reference" aria-label="Enlarge event reference for Meadow Knight"><img src="assets/refevent-new-01-reference.jpg" alt="" loading="lazy"></button>
+          </div>
+        </div>
+        <div class="sample-card sample-card-with-refs">
+          <button class="sample-play" type="button" data-video="refevent-new-02" data-title="Fox Spirit" aria-label="Play Fox Spirit Ref Event output">
+            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/refevent-new-02.jpg" data-src="assets/refevent-new-02.mp4" aria-hidden="true"></video>
+            <span class="sample-caption"><small>REF EVENT</small><strong>Fox Spirit</strong><b aria-hidden="true">↗</b></span>
+          </button>
+          <div class="reference-inputs"><span>START / RECREATED REF</span>
+            <button class="reference-thumb" type="button" data-full-src="assets/refevent-new-02-start-full.jpg" data-reference-label="Start frame" aria-label="Enlarge start frame for Fox Spirit"><img src="assets/refevent-new-02-start.jpg" alt="" loading="lazy"></button>
+            <button class="reference-thumb" type="button" data-full-src="assets/refevent-new-02-reference-full.jpg" data-reference-label="Reference recreated from video" aria-label="Enlarge recreated reference for Fox Spirit"><img src="assets/refevent-new-02-reference.jpg" alt="" loading="lazy"></button>
+          </div>
+        </div>
+        <div class="sample-card sample-card-with-refs">
+          <button class="sample-play" type="button" data-video="refevent-new-03" data-title="Night Walker" aria-label="Play Night Walker Ref Event output">
+            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/refevent-new-03.jpg" data-src="assets/refevent-new-03.mp4" aria-hidden="true"></video>
+            <span class="sample-caption"><small>REF EVENT</small><strong>Night Walker</strong><b aria-hidden="true">↗</b></span>
+          </button>
+          <div class="reference-inputs"><span>START / EVENT</span>
+            <button class="reference-thumb" type="button" data-full-src="assets/refevent-new-03-start-full.jpg" data-reference-label="Start frame" aria-label="Enlarge start frame for Night Walker"><img src="assets/refevent-new-03-start.jpg" alt="" loading="lazy"></button>
+            <button class="reference-thumb" type="button" data-full-src="assets/refevent-new-03-reference-full.jpg" data-reference-label="Event reference" aria-label="Enlarge event reference for Night Walker"><img src="assets/refevent-new-03-reference.jpg" alt="" loading="lazy"></button>
+          </div>
+        </div>
+        <div class="sample-card sample-card-with-refs">
+          <button class="sample-play" type="button" data-video="refevent-01" data-title="Ember Guardian" aria-label="Play Ember Guardian Ref Event output">
+            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/refevent-01.jpg" data-src="assets/refevent-01.mp4" aria-hidden="true"></video>
+            <span class="sample-caption"><small>REF EVENT</small><strong>Ember Guardian</strong><b aria-hidden="true">↗</b></span>
+          </button>
+          <div class="reference-inputs"><span>START / EVENT</span>
+            <button class="reference-thumb" type="button" data-full-src="assets/refevent-01-start-full.jpg" data-reference-label="Start frame" aria-label="Enlarge start frame for Ember Guardian"><img src="assets/refevent-01-start.jpg" alt="" loading="lazy"></button>
+            <button class="reference-thumb" type="button" data-full-src="assets/refevent-01-reference-full.jpg" data-reference-label="Event reference" aria-label="Enlarge event reference for Ember Guardian"><img src="assets/refevent-01-reference.jpg" alt="" loading="lazy"></button>
+          </div>
+        </div>
+        <div class="sample-card sample-card-with-refs">
+          <button class="sample-play" type="button" data-video="refevent-03" data-title="Winged Automaton" aria-label="Play Winged Automaton Ref Event output">
+            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/refevent-03.jpg" data-src="assets/refevent-03.mp4" aria-hidden="true"></video>
+            <span class="sample-caption"><small>REF EVENT</small><strong>Winged Automaton</strong><b aria-hidden="true">↗</b></span>
+          </button>
+          <div class="reference-inputs"><span>START / EVENT</span>
+            <button class="reference-thumb" type="button" data-full-src="assets/refevent-03-start-full.jpg" data-reference-label="Start frame" aria-label="Enlarge start frame for Winged Automaton"><img src="assets/refevent-03-start.jpg" alt="" loading="lazy"></button>
+            <button class="reference-thumb" type="button" data-full-src="assets/refevent-03-reference-full.jpg" data-reference-label="Event reference" aria-label="Enlarge event reference for Winged Automaton"><img src="assets/refevent-03-reference.jpg" alt="" loading="lazy"></button>
+          </div>
+        </div>
+        <div class="sample-card sample-card-with-refs">
+          <button class="sample-play" type="button" data-video="refevent-06" data-title="Paper Automaton" aria-label="Play Paper Automaton Ref Event output">
+            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/refevent-06.jpg" data-src="assets/refevent-06.mp4" aria-hidden="true"></video>
+            <span class="sample-caption"><small>REF EVENT</small><strong>Paper Automaton</strong><b aria-hidden="true">↗</b></span>
+          </button>
+          <div class="reference-inputs"><span>START / EVENT</span>
+            <button class="reference-thumb" type="button" data-full-src="assets/refevent-06-start-full.jpg" data-reference-label="Start frame" aria-label="Enlarge start frame for Paper Automaton"><img src="assets/refevent-06-start.jpg" alt="" loading="lazy"></button>
+            <button class="reference-thumb" type="button" data-full-src="assets/refevent-06-reference-full.jpg" data-reference-label="Event reference" aria-label="Enlarge event reference for Paper Automaton"><img src="assets/refevent-06-reference.jpg" alt="" loading="lazy"></button>
+          </div>
+        </div>
+        <div class="sample-card sample-card-with-refs">
+          <button class="sample-play" type="button" data-video="refevent-07" data-title="Lava Sentinel" aria-label="Play Lava Sentinel Ref Event output">
+            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/refevent-07.jpg" data-src="assets/refevent-07.mp4" aria-hidden="true"></video>
+            <span class="sample-caption"><small>REF EVENT</small><strong>Lava Sentinel</strong><b aria-hidden="true">↗</b></span>
+          </button>
+          <div class="reference-inputs"><span>START / EVENT</span>
+            <button class="reference-thumb" type="button" data-full-src="assets/refevent-07-start-full.jpg" data-reference-label="Start frame" aria-label="Enlarge start frame for Lava Sentinel"><img src="assets/refevent-07-start.jpg" alt="" loading="lazy"></button>
+            <button class="reference-thumb" type="button" data-full-src="assets/refevent-07-reference-full.jpg" data-reference-label="Event reference" aria-label="Enlarge event reference for Lava Sentinel"><img src="assets/refevent-07-reference.jpg" alt="" loading="lazy"></button>
+          </div>
+        </div>
+        <div class="sample-card sample-card-with-refs">
+          <button class="sample-play" type="button" data-video="refevent-09" data-title="Clockwork Visitor" aria-label="Play Clockwork Visitor Ref Event output">
+            <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/refevent-09.jpg" data-src="assets/refevent-09.mp4" aria-hidden="true"></video>
+            <span class="sample-caption"><small>REF EVENT</small><strong>Clockwork Visitor</strong><b aria-hidden="true">↗</b></span>
+          </button>
+          <div class="reference-inputs"><span>START / EVENT</span>
+            <button class="reference-thumb" type="button" data-full-src="assets/refevent-09-start-full.jpg" data-reference-label="Start frame" aria-label="Enlarge start frame for Clockwork Visitor"><img src="assets/refevent-09-start.jpg" alt="" loading="lazy"></button>
+            <button class="reference-thumb" type="button" data-full-src="assets/refevent-09-reference-full.jpg" data-reference-label="Event reference" aria-label="Enlarge event reference for Clockwork Visitor"><img src="assets/refevent-09-reference.jpg" alt="" loading="lazy"></button>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-footer" aria-controls="carousel-ref-event">
+        <div class="carousel-progress" aria-hidden="true"><span></span></div>
+        <span class="carousel-count">01 / 08</span>
+        <div class="carousel-arrows">
+          <button type="button" data-slide="-1" aria-label="Previous Ref Event cases">←</button>
+          <button type="button" data-slide="1" aria-label="Next Ref Event cases">→</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="interaction" class="home-section capability-section" aria-labelledby="interaction-title">
+      <div class="home-section-head">
+        <div><span class="home-index">06 / INTERACTION</span><h2 id="interaction-title">Act on the world.</h2></div>
+        <p>Objects, tools, and physical actions.</p>
+      </div>
+      <div class="carousel-viewport" id="carousel-interaction" role="group" aria-roledescription="carousel" aria-label="Interaction cases" tabindex="0">
+        <button class="sample-card" type="button" data-video="interaction-open-door" data-title="Open the Door" aria-label="Play Open the Door interaction output">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/interaction-open-door.jpg" data-src="assets/interaction-open-door.mp4" aria-hidden="true"></video><span class="sample-caption"><small>INTERACTION</small><strong>Open the Door</strong><b aria-hidden="true">↗</b></span>
+        </button>
+        <button class="sample-card" type="button" data-video="interaction-magic-box" data-title="Magic Box" aria-label="Play Magic Box interaction output">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/interaction-magic-box.jpg" data-src="assets/interaction-magic-box.mp4" aria-hidden="true"></video><span class="sample-caption"><small>INTERACTION</small><strong>Magic Box</strong><b aria-hidden="true">↗</b></span>
+        </button>
+        <button class="sample-card" type="button" data-video="interaction-sword-cut" data-title="Cut the Chain" aria-label="Play Cut the Chain interaction output">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/interaction-sword-cut.jpg" data-src="assets/interaction-sword-cut.mp4" aria-hidden="true"></video><span class="sample-caption"><small>INTERACTION</small><strong>Cut the Chain</strong><b aria-hidden="true">↗</b></span>
+        </button>
+        <button class="sample-card" type="button" data-video="pat" data-title="Pat the Cow" aria-label="Play Pat the Cow Interaction output">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/pat.jpg" data-src="assets/pat.mp4" aria-hidden="true"></video>
+          <span class="sample-caption"><small>INTERACTION</small><strong>Pat the Cow</strong><b aria-hidden="true">↗</b></span>
+        </button>
+        <button class="sample-card" type="button" data-video="lift" data-title="Lift the Cow" aria-label="Play Lift the Cow Interaction output">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/lift.jpg" data-src="assets/lift.mp4" aria-hidden="true"></video>
+          <span class="sample-caption"><small>INTERACTION</small><strong>Lift the Cow</strong><b aria-hidden="true">↗</b></span>
+        </button>
+        <button class="sample-card" type="button" data-video="drag" data-title="Drag the Cow" aria-label="Play Drag the Cow Interaction output">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/drag.jpg" data-src="assets/drag.mp4" aria-hidden="true"></video>
+          <span class="sample-caption"><small>INTERACTION</small><strong>Drag the Cow</strong><b aria-hidden="true">↗</b></span>
+        </button>
+      </div>
+
+      <div class="carousel-footer" aria-controls="carousel-interaction">
+        <div class="carousel-progress" aria-hidden="true"><span></span></div>
+        <span class="carousel-count">01 / 06</span>
+        <div class="carousel-arrows">
+          <button type="button" data-slide="-1" aria-label="Previous Interaction cases">←</button>
+          <button type="button" data-slide="1" aria-label="Next Interaction cases">→</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="embodied" class="home-section capability-section capability-embodied" aria-labelledby="embodied-title">
+      <div class="home-section-head">
+        <div><span class="home-index">07 / EMBODIED</span><h2 id="embodied-title">Worlds for agents.</h2></div>
+        <p>Robot actions and navigable spaces.</p>
+      </div>
+      <div class="carousel-viewport" id="carousel-embodied" role="group" aria-roledescription="carousel" aria-label="Embodied cases" tabindex="0">
+        <button class="sample-card" type="button" data-video="embodied-lift" data-title="Pick and Place" aria-label="Play Pick and Place embodied output">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/embodied-lift.jpg" data-src="assets/embodied-lift.mp4" aria-hidden="true"></video><span class="sample-caption"><small>EMBODIED</small><strong>Pick and Place</strong><b aria-hidden="true">↗</b></span>
+        </button>
+        <button class="sample-card" type="button" data-video="embodied-humanoid" data-title="Humanoid Carry" aria-label="Play Humanoid Carry embodied output">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/embodied-humanoid.jpg" data-src="assets/embodied-humanoid.mp4" aria-hidden="true"></video><span class="sample-caption"><small>EMBODIED</small><strong>Humanoid Carry</strong><b aria-hidden="true">↗</b></span>
+        </button>
+        <button class="sample-card" type="button" data-video="embodied-mining" data-title="Mining Crawler" aria-label="Play Mining Crawler embodied output">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/embodied-mining.jpg" data-src="assets/embodied-mining.mp4" aria-hidden="true"></video><span class="sample-caption"><small>EMBODIED</small><strong>Mining Crawler</strong><b aria-hidden="true">↗</b></span>
+        </button>
+        <button class="sample-card" type="button" data-video="embodied-bimanual" data-title="Bimanual Pregrasp" aria-label="Play Bimanual Pregrasp embodied output">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/embodied-bimanual.jpg" data-src="assets/embodied-bimanual.mp4" aria-hidden="true"></video><span class="sample-caption"><small>EMBODIED</small><strong>Bimanual Pregrasp</strong><b aria-hidden="true">↗</b></span>
+        </button>
+        <button class="sample-card" type="button" data-video="embodied-warehouse" data-title="Warehouse Navigation" aria-label="Play Warehouse Navigation embodied output">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/embodied-warehouse.jpg" data-src="assets/embodied-warehouse.mp4" aria-hidden="true"></video><span class="sample-caption"><small>EMBODIED</small><strong>Warehouse Navigation</strong><b aria-hidden="true">↗</b></span>
+        </button>
+        <button class="sample-card" type="button" data-video="embodied-underwater" data-title="Underwater ROV" aria-label="Play Underwater ROV embodied output">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/embodied-underwater.jpg" data-src="assets/embodied-underwater.mp4" aria-hidden="true"></video><span class="sample-caption"><small>EMBODIED</small><strong>Underwater ROV</strong><b aria-hidden="true">↗</b></span>
+        </button>
+        <button class="sample-card" type="button" data-video="embodied-greenhouse" data-title="Greenhouse Inspection" aria-label="Play Greenhouse Inspection embodied output">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/embodied-greenhouse.jpg" data-src="assets/embodied-greenhouse.mp4" aria-hidden="true"></video><span class="sample-caption"><small>EMBODIED</small><strong>Greenhouse Inspection</strong><b aria-hidden="true">↗</b></span>
+        </button>
+        <button class="sample-card" type="button" data-video="embodied-drone" data-title="Drone Flight" aria-label="Play Drone Flight embodied output">
+          <video class="autoplay-preview" muted loop playsinline preload="none" poster="assets/embodied-drone.jpg" data-src="assets/embodied-drone.mp4" aria-hidden="true"></video><span class="sample-caption"><small>EMBODIED</small><strong>Drone Flight</strong><b aria-hidden="true">↗</b></span>
+        </button>
+      </div>
+      <div class="carousel-footer" aria-controls="carousel-embodied">
+        <div class="carousel-progress" aria-hidden="true"><span></span></div>
+        <span class="carousel-count">01 / 08</span>
+        <div class="carousel-arrows">
+          <button type="button" data-slide="-1" aria-label="Previous Embodied cases">←</button>
+          <button type="button" data-slide="1" aria-label="Next Embodied cases">→</button>
+        </div>
+      </div>
+      <p class="gallery-note">Pre-recorded model outputs · Select a video to watch the full clip.</p>
+    </section>
+
+    <section id="research" class="home-section research-short" aria-labelledby="research-title">
+      <span class="home-index">08 / THE RESEARCH</span>
+      <div class="research-short-grid">
+        <div><h2 id="research-title">One model.<br>Many forms of control.</h2><p>Camera. Language. Visual reference.</p></div>
+        <div class="research-paper"><span class="home-index">ENUMA / TECHNICAL REPORT</span><h3>Unifying Camera, Language, and Visual Controls for Interactive World Modeling</h3><details><summary>Read abstract <span aria-hidden="true">↗</span></summary><p>ENUMA is a unified interactive world model supporting camera trajectories, language events, and visual references. Reference Forcing adapts a bidirectional video generator to chunk-wise causal generation, then distills it for efficient rollout. The model is evaluated on established world-model benchmarks, ENUMA-Bench, and human preference comparisons.</p></details></div>
+      </div>
+      <a class="benchmark-callout" href="benchmark/"><span><small>ENUMA-BENCH</small><strong>Explore the benchmark</strong></span><span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+  <footer><img src="assets/enuma_logo_white.svg" alt="ENUMA" width="142" height="29"><p>Interactive worlds. Unified.</p><span>RESEARCH PREVIEW / 2026</span></footer>
+  <dialog id="video-dialog" aria-labelledby="video-dialog-title"><div class="dialog-top"><h2 id="video-dialog-title">Model output</h2><button id="close-dialog" type="button" aria-label="Close video">×</button></div><video id="full-video" controls muted playsinline loop preload="none"></video><p>ENUMA · Pre-recorded model output</p></dialog>
+  <dialog id="reference-dialog" aria-labelledby="reference-dialog-title"><div class="dialog-top"><h2 id="reference-dialog-title">Visual reference</h2><div class="reference-dialog-controls"><span id="reference-dialog-count">01 / 02</span><button id="reference-prev" type="button" aria-label="Previous reference image">←</button><button id="reference-next" type="button" aria-label="Next reference image">→</button><button id="close-reference-dialog" type="button" aria-label="Close reference image">×</button></div></div><img id="reference-full" alt=""></dialog>
   <script src="app.js"></script>
 </body>
 </html>

@@ -38,5 +38,970 @@
     "asset": "drag",
     "bytes": 2564868,
     "source": "video demo/doll_cow_drag.mp4"
+  },
+  {
+    "asset": "hero-autumn",
+    "bytes": 3387445,
+    "source": "video demo/knight_autumn_celestial.mp4"
+  },
+  {
+    "asset": "hero-tree",
+    "bytes": 5025490,
+    "source": "video demo/knight_tree_kindom.mp4"
+  },
+  {
+    "asset": "hero-mingjie",
+    "bytes": 1017422,
+    "source": "video demo/knight_event_mingjie.mp4"
+  },
+  {
+    "asset": "hero-zigurat",
+    "bytes": 2730339,
+    "source": "video demo/knight_event_zigurat.mp4"
+  },
+  {
+    "asset": "hero-stonelion",
+    "bytes": 3151992,
+    "source": "video demo/knight_event_stonelion.mp4"
+  },
+  {
+    "asset": "hero-teaser-mosaic",
+    "bytes": 1786711,
+    "source": "video demo/edit/animations/slot_enuma_teaser_stonelion_motion_v1/render.mp4",
+    "frames": "66-119"
+  },
+  {
+    "asset": "ice-lava",
+    "bytes": 2649632,
+    "source": "text event/ice_to_lava.mp4"
+  },
+  {
+    "asset": "palace-neon",
+    "bytes": 1580547,
+    "source": "text event/palace_to_cyberpunk.mp4"
+  },
+  {
+    "asset": "road-sandstorm",
+    "bytes": 2085031,
+    "source": "text event/road_sandstorm.mp4"
+  },
+  {
+    "asset": "phoenix",
+    "bytes": 1842627,
+    "source": "video demo/knight_event_phoenix.mp4"
+  },
+  {
+    "asset": "spacecraft",
+    "bytes": 1696468,
+    "source": "video demo/knight_event_spacecraft.mp4"
+  },
+  {
+    "asset": "portal-preview",
+    "bytes": 885989,
+    "source": "video_tobe_concated/obsidian_portal/edit/final.mp4"
+  },
+  {
+    "asset": "dragon-preview",
+    "bytes": 696365,
+    "source": "video_tobe_concated/sword_chain_drawbridge/edit/final.mp4"
+  },
+  {
+    "asset": "magic-fireball-preview",
+    "bytes": 691229,
+    "source": "video_tobe_concated/magic_fireball_brazier/edit/final.mp4"
+  },
+  {
+    "asset": "car-wash-preview",
+    "bytes": 1082237,
+    "source": "video_tobe_concated/car_wash/edit/final.mp4"
+  },
+  {
+    "asset": "street-preview",
+    "bytes": 5253937,
+    "source": "video_tobe_concated/residential_street/edit/final.mp4"
+  },
+  {
+    "asset": "interactive/obsidian-portal",
+    "bytes": 13196931,
+    "source": "video_tobe_concated/obsidian_portal/edit/interactive/"
+  },
+  {
+    "asset": "interactive/drawbridge-dragon",
+    "bytes": 24358630,
+    "source": "video_tobe_concated/sword_chain_drawbridge/edit/interactive/"
+  },
+  {
+    "asset": "interactive/magic-fireball-brazier",
+    "bytes": 43442740,
+    "source": "video_tobe_concated/magic_fireball_brazier/edit/interactive/"
+  },
+  {
+    "asset": "interactive/car-wash",
+    "bytes": 10360922,
+    "source": "video_tobe_concated/car_wash/edit/interactive/"
+  },
+  {
+    "asset": "interactive/residential-street",
+    "bytes": 65811053,
+    "source": "video_tobe_concated/residential_street/edit/interactive/"
+  },
+  {
+    "asset": "enuma-demo",
+    "bytes": 32223150,
+    "source": "video demo/edit/enuma_demo_current_v6/enuma_demo_current_v6_stable.mp4"
+  },
+  {
+    "asset": "cow-event",
+    "bytes": 3157112,
+    "source": "video demo/doll_cow_event.mp4"
+  },
+  {
+    "asset": "ref2vid-01",
+    "bytes": 2975080,
+    "source": "Ref2Vid/8s/case1/generated_with_controls.mp4"
+  },
+  {
+    "asset": "ref2vid-02",
+    "bytes": 4810334,
+    "source": "Ref2Vid/8s/case2/generated_with_controls.mp4"
+  },
+  {
+    "asset": "ref2vid-05",
+    "bytes": 1753766,
+    "source": "Ref2Vid/8s/case5/generated_with_controls.mp4"
+  },
+  {
+    "asset": "ref2vid-07",
+    "bytes": 2317315,
+    "source": "Ref2Vid/8s/case7/generated_with_controls.mp4"
+  },
+  {
+    "asset": "ref2vid-08",
+    "bytes": 3991812,
+    "source": "Ref2Vid/8s/case8/generated_with_controls.mp4"
+  },
+  {
+    "asset": "ref2vid-15",
+    "bytes": 2326247,
+    "source": "Ref2Vid/8s/case15/generated_with_controls.mp4"
+  },
+  {
+    "asset": "ref2vid-16",
+    "bytes": 3388209,
+    "source": "Ref2Vid/8s/case16/generated_with_controls.mp4"
+  },
+  {
+    "asset": "ref2vid-19",
+    "bytes": 6363411,
+    "source": "Ref2Vid/8s/case19/generated_with_controls.mp4"
+  },
+  {
+    "asset": "refevent-new-01",
+    "bytes": 2228030,
+    "source": "RefEvent/edit/i_key_restore/ref_video_1_ez_i_restored.mp4",
+    "source_original": "RefEvent/new case/ref_video_1-ezremove.mp4",
+    "modification": "restore translucent I key only"
+  },
+  {
+    "asset": "refevent-new-02",
+    "bytes": 2343467,
+    "source": "RefEvent/edit/i_key_restore/ref_video_2_ez_i_restored.mp4",
+    "source_original": "RefEvent/new case/ref_video_2-ez.mp4",
+    "modification": "restore translucent I key only"
+  },
+  {
+    "asset": "refevent-new-03",
+    "bytes": 1330989,
+    "source": "RefEvent/edit/i_key_restore/ref_video_3_ez_i_restored.mp4",
+    "source_original": "RefEvent/new case/ref_video_3-ez.mp4",
+    "modification": "restore translucent I key only"
+  },
+  {
+    "asset": "refevent-01",
+    "bytes": 2163081,
+    "source": "RefEvent/8s/case1/generated_with_controls.mp4"
+  },
+  {
+    "asset": "refevent-03",
+    "bytes": 1704388,
+    "source": "RefEvent/8s/case3/generated_with_controls.mp4"
+  },
+  {
+    "asset": "refevent-06",
+    "bytes": 2339424,
+    "source": "RefEvent/8s/case6/generated_with_controls.mp4"
+  },
+  {
+    "asset": "refevent-07",
+    "bytes": 1789052,
+    "source": "RefEvent/8s/case7/generated_with_controls.mp4"
+  },
+  {
+    "asset": "refevent-09",
+    "bytes": 1816842,
+    "source": "RefEvent/8s/case9/generated_with_controls.mp4"
+  },
+  {
+    "asset": "text-short-stained-glass",
+    "bytes": 1698427,
+    "source": "text event/stained_glass_world_8s.mp4"
+  },
+  {
+    "asset": "text-short-embroidered",
+    "bytes": 2406965,
+    "source": "text event/embroidered_tapestry_world_8s.mp4"
+  },
+  {
+    "asset": "text-short-lighthouse-meteor",
+    "bytes": 1283121,
+    "source": "text event/edit/lighthouse_meteor_8s.mp4",
+    "source_original": "text event/generated_with_controls.mp4",
+    "clip_start_seconds": 10,
+    "clip_duration_seconds": 8.0625
+  },
+  {
+    "asset": "text-short-xianxia-crane",
+    "bytes": 1452036,
+    "source": "text event/xianxia_crane.mp4"
+  },
+  {
+    "asset": "text-short-karst-beacon",
+    "bytes": 1287246,
+    "source": "text event/turn1_karst_golden_beacon_v1.mp4"
+  },
+  {
+    "asset": "interaction-open-door",
+    "bytes": 1070261,
+    "source": "interaction/open_door.mp4"
+  },
+  {
+    "asset": "interaction-magic-box",
+    "bytes": 2379854,
+    "source": "interaction/magic_box.mp4"
+  },
+  {
+    "asset": "interaction-sword-cut",
+    "bytes": 1622454,
+    "source": "interaction/sword_cut.mp4"
+  },
+  {
+    "asset": "embodied-lift",
+    "bytes": 614342,
+    "source": "embodied/lift_right_lower.mp4"
+  },
+  {
+    "asset": "embodied-warehouse",
+    "bytes": 1319105,
+    "source": "embodied/warehouse_amr.mp4"
+  },
+  {
+    "asset": "embodied-greenhouse",
+    "bytes": 3407607,
+    "source": "embodied/greenhouse_inspection.mp4"
+  },
+  {
+    "asset": "embodied-humanoid",
+    "bytes": 1197825,
+    "source": "embodied/humannoid_carry.mp4"
+  },
+  {
+    "asset": "embodied-mining",
+    "bytes": 3328022,
+    "source": "embodied/mining_crawler.mp4"
+  },
+  {
+    "asset": "embodied-bimanual",
+    "bytes": 535804,
+    "source": "embodied/bimanual_pregrasp.mp4"
+  },
+  {
+    "asset": "embodied-drone",
+    "bytes": 2203390,
+    "source": "embodied/drone_flight.mp4"
+  },
+  {
+    "asset": "embodied-underwater",
+    "bytes": 2205588,
+    "source": "embodied/underwater_rov.mp4"
+  },
+  {
+    "asset": "ref2vid-0243",
+    "bytes": 8011597,
+    "source": "Ref2Vid/30s/r2v_0243_broad_horned_bison_golden_savanna/generated_with_controls.mp4"
+  },
+  {
+    "asset": "ref2vid-0243-preview",
+    "bytes": 1525520,
+    "source": "Ref2Vid/30s/r2v_0243_broad_horned_bison_golden_savanna/generated_with_controls.mp4",
+    "clip_start_seconds": 3,
+    "clip_duration_seconds": 8
+  },
+  {
+    "asset": "ref2vid-0256",
+    "bytes": 7144603,
+    "source": "Ref2Vid/30s/r2v_0256_lunar_rescue_astro_lavender_lunar_pla/generated_with_controls.mp4"
+  },
+  {
+    "asset": "ref2vid-0256-preview",
+    "bytes": 1550097,
+    "source": "Ref2Vid/30s/r2v_0256_lunar_rescue_astro_lavender_lunar_pla/generated_with_controls.mp4",
+    "clip_start_seconds": 5,
+    "clip_duration_seconds": 8
+  },
+  {
+    "asset": "ref2vid-0264",
+    "bytes": 7808104,
+    "source": "Ref2Vid/30s/r2v_0264_azure_wyvern_bright_floating_ga/generated_with_controls.mp4"
+  },
+  {
+    "asset": "ref2vid-0264-preview",
+    "bytes": 1376982,
+    "source": "Ref2Vid/30s/r2v_0264_azure_wyvern_bright_floating_ga/generated_with_controls.mp4",
+    "clip_start_seconds": 12,
+    "clip_duration_seconds": 8
+  },
+  {
+    "asset": "ref2vid-0412",
+    "bytes": 10485700,
+    "source": "Ref2Vid/30s/r2v_0412_highland_warden_ri_alpine_lake_basin/generated_with_controls.mp4"
+  },
+  {
+    "asset": "ref2vid-0412-preview",
+    "bytes": 1862650,
+    "source": "Ref2Vid/30s/r2v_0412_highland_warden_ri_alpine_lake_basin/generated_with_controls.mp4",
+    "clip_start_seconds": 10,
+    "clip_duration_seconds": 8
+  },
+  {
+    "asset": "ref2vid-0679",
+    "bytes": 8415174,
+    "source": "Ref2Vid/30s/r2v_0679_copper_automaton_s_giant_sequoia_clea/generated_with_controls.mp4"
+  },
+  {
+    "asset": "ref2vid-0679-preview",
+    "bytes": 1653160,
+    "source": "Ref2Vid/30s/r2v_0679_copper_automaton_s_giant_sequoia_clea/generated_with_controls.mp4",
+    "clip_start_seconds": 10,
+    "clip_duration_seconds": 8
+  },
+  {
+    "asset": "ref2vid-0757",
+    "bytes": 10596451,
+    "source": "Ref2Vid/30s/r2v_0757_coastal_cartograph_flowering_coastal/generated_with_controls.mp4"
+  },
+  {
+    "asset": "ref2vid-0757-preview",
+    "bytes": 1703514,
+    "source": "Ref2Vid/30s/r2v_0757_coastal_cartograph_flowering_coastal/generated_with_controls.mp4",
+    "clip_start_seconds": 11,
+    "clip_duration_seconds": 8
+  },
+  {
+    "asset": "ref2vid-0825",
+    "bytes": 6532386,
+    "source": "Ref2Vid/30s/r2v_0825_desert_scout_ridin_crystal_desert_sky/generated_with_controls.mp4"
+  },
+  {
+    "asset": "ref2vid-0825-preview",
+    "bytes": 1335586,
+    "source": "Ref2Vid/30s/r2v_0825_desert_scout_ridin_crystal_desert_sky/generated_with_controls.mp4",
+    "clip_start_seconds": 11,
+    "clip_duration_seconds": 8
+  },
+  {
+    "asset": "ref2vid-0988",
+    "bytes": 9055513,
+    "source": "Ref2Vid/30s/r2v_0988_sky_ranger_riding_bright_floating_ga/generated_with_controls.mp4"
+  },
+  {
+    "asset": "ref2vid-0988-preview",
+    "bytes": 1751472,
+    "source": "Ref2Vid/30s/r2v_0988_sky_ranger_riding_bright_floating_ga/generated_with_controls.mp4",
+    "clip_start_seconds": 10,
+    "clip_duration_seconds": 8
+  },
+  {
+    "asset": "text-eclipse",
+    "bytes": 3292462,
+    "source": "text event/30s/16_eclipse_desert_observatory/generated_with_controls.mp4"
+  },
+  {
+    "asset": "text-eclipse-preview",
+    "bytes": 619199,
+    "source": "text event/30s/16_eclipse_desert_observatory/generated_with_controls.mp4",
+    "clip_start_seconds": 14,
+    "clip_duration_seconds": 8
+  },
+  {
+    "asset": "text-0152",
+    "bytes": 5389143,
+    "source": "text event/30s/physical_0152_entity_arrival/generated_with_controls.mp4"
+  },
+  {
+    "asset": "text-0152-preview",
+    "bytes": 954578,
+    "source": "text event/30s/physical_0152_entity_arrival/generated_with_controls.mp4",
+    "clip_start_seconds": 12,
+    "clip_duration_seconds": 8
+  },
+  {
+    "asset": "text-0558",
+    "bytes": 6656943,
+    "source": "text event/30s/physical_0558_terrain_structure/generated_with_controls.mp4"
+  },
+  {
+    "asset": "text-0558-preview",
+    "bytes": 1481048,
+    "source": "text event/30s/physical_0558_terrain_structure/generated_with_controls.mp4",
+    "clip_start_seconds": 15,
+    "clip_duration_seconds": 8
+  },
+  {
+    "asset": "text-0584",
+    "bytes": 5900839,
+    "source": "text event/30s/physical_0584_weather_celestial/generated_with_controls.mp4"
+  },
+  {
+    "asset": "text-0584-preview",
+    "bytes": 1030625,
+    "source": "text event/30s/physical_0584_weather_celestial/generated_with_controls.mp4",
+    "clip_start_seconds": 16,
+    "clip_duration_seconds": 8
+  },
+  {
+    "asset": "text-0601",
+    "bytes": 5306165,
+    "source": "text event/30s/physical_0601_weather_celestial/generated_with_controls.mp4"
+  },
+  {
+    "asset": "text-0601-preview",
+    "bytes": 1158523,
+    "source": "text event/30s/physical_0601_weather_celestial/generated_with_controls.mp4",
+    "clip_start_seconds": 10,
+    "clip_duration_seconds": 8
+  },
+  {
+    "asset": "text-0627",
+    "bytes": 8386925,
+    "source": "text event/30s/physical_0627_weather_celestial/generated_with_controls.mp4"
+  },
+  {
+    "asset": "text-0627-preview",
+    "bytes": 1274049,
+    "source": "text event/30s/physical_0627_weather_celestial/generated_with_controls.mp4",
+    "clip_start_seconds": 14,
+    "clip_duration_seconds": 8
+  },
+  {
+    "asset": "text-spire",
+    "bytes": 6495106,
+    "source": "text event/30s/physical_0756_surreal_physics_ev/generated_with_controls.mp4"
+  },
+  {
+    "asset": "text-spire-preview",
+    "bytes": 1056990,
+    "source": "text event/30s/physical_0756_surreal_physics_ev/generated_with_controls.mp4",
+    "clip_start_seconds": 14,
+    "clip_duration_seconds": 8
+  },
+  {
+    "asset": "text-0131",
+    "bytes": 6715547,
+    "source": "text event/30s/style_0131_bold_limited_palet/generated_with_controls.mp4"
+  },
+  {
+    "asset": "text-0131-preview",
+    "bytes": 1480744,
+    "source": "text event/30s/style_0131_bold_limited_palet/generated_with_controls.mp4",
+    "clip_start_seconds": 12,
+    "clip_duration_seconds": 8
+  },
+  {
+    "asset": "ref2vid-01-1",
+    "bytes": 32670,
+    "source": "Ref2Vid/8s/case1/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-01-1-full",
+    "bytes": 221115,
+    "source": "Ref2Vid/8s/case1/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-01-2",
+    "bytes": 100317,
+    "source": "Ref2Vid/8s/case1/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-01-2-full",
+    "bytes": 640314,
+    "source": "Ref2Vid/8s/case1/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-02-1",
+    "bytes": 49476,
+    "source": "Ref2Vid/8s/case2/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-02-1-full",
+    "bytes": 396473,
+    "source": "Ref2Vid/8s/case2/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-02-2",
+    "bytes": 113910,
+    "source": "Ref2Vid/8s/case2/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-02-2-full",
+    "bytes": 839638,
+    "source": "Ref2Vid/8s/case2/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-05-1",
+    "bytes": 42070,
+    "source": "Ref2Vid/8s/case5/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-05-1-full",
+    "bytes": 357178,
+    "source": "Ref2Vid/8s/case5/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-05-2",
+    "bytes": 44028,
+    "source": "Ref2Vid/8s/case5/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-05-2-full",
+    "bytes": 360266,
+    "source": "Ref2Vid/8s/case5/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-07-1",
+    "bytes": 27427,
+    "source": "Ref2Vid/8s/case7/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-07-1-full",
+    "bytes": 218418,
+    "source": "Ref2Vid/8s/case7/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-07-2",
+    "bytes": 87856,
+    "source": "Ref2Vid/8s/case7/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-07-2-full",
+    "bytes": 670854,
+    "source": "Ref2Vid/8s/case7/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-08-1",
+    "bytes": 33827,
+    "source": "Ref2Vid/8s/case8/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-08-1-full",
+    "bytes": 283250,
+    "source": "Ref2Vid/8s/case8/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-08-2",
+    "bytes": 94251,
+    "source": "Ref2Vid/8s/case8/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-08-2-full",
+    "bytes": 740533,
+    "source": "Ref2Vid/8s/case8/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-15-1",
+    "bytes": 23787,
+    "source": "Ref2Vid/8s/case15/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-15-1-full",
+    "bytes": 168724,
+    "source": "Ref2Vid/8s/case15/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-15-2",
+    "bytes": 78155,
+    "source": "Ref2Vid/8s/case15/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-15-2-full",
+    "bytes": 667539,
+    "source": "Ref2Vid/8s/case15/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-16-1",
+    "bytes": 20568,
+    "source": "Ref2Vid/8s/case16/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-16-1-full",
+    "bytes": 146682,
+    "source": "Ref2Vid/8s/case16/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-16-2",
+    "bytes": 82377,
+    "source": "Ref2Vid/8s/case16/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-16-2-full",
+    "bytes": 661809,
+    "source": "Ref2Vid/8s/case16/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-19-1",
+    "bytes": 25736,
+    "source": "Ref2Vid/8s/case19/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-19-1-full",
+    "bytes": 220673,
+    "source": "Ref2Vid/8s/case19/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-19-2",
+    "bytes": 113698,
+    "source": "Ref2Vid/8s/case19/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-19-2-full",
+    "bytes": 866424,
+    "source": "Ref2Vid/8s/case19/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-0243-1",
+    "bytes": 53855,
+    "source": "Ref2Vid/30s/r2v_0243_broad_horned_bison_golden_savanna/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-0243-1-full",
+    "bytes": 418242,
+    "source": "Ref2Vid/30s/r2v_0243_broad_horned_bison_golden_savanna/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-0243-2",
+    "bytes": 88546,
+    "source": "Ref2Vid/30s/r2v_0243_broad_horned_bison_golden_savanna/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-0243-2-full",
+    "bytes": 657963,
+    "source": "Ref2Vid/30s/r2v_0243_broad_horned_bison_golden_savanna/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-0256-1",
+    "bytes": 24463,
+    "source": "Ref2Vid/30s/r2v_0256_lunar_rescue_astro_lavender_lunar_pla/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-0256-1-full",
+    "bytes": 165520,
+    "source": "Ref2Vid/30s/r2v_0256_lunar_rescue_astro_lavender_lunar_pla/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-0256-2",
+    "bytes": 85497,
+    "source": "Ref2Vid/30s/r2v_0256_lunar_rescue_astro_lavender_lunar_pla/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-0256-2-full",
+    "bytes": 636562,
+    "source": "Ref2Vid/30s/r2v_0256_lunar_rescue_astro_lavender_lunar_pla/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-0264-1",
+    "bytes": 36343,
+    "source": "Ref2Vid/30s/r2v_0264_azure_wyvern_bright_floating_ga/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-0264-1-full",
+    "bytes": 249077,
+    "source": "Ref2Vid/30s/r2v_0264_azure_wyvern_bright_floating_ga/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-0264-2",
+    "bytes": 90080,
+    "source": "Ref2Vid/30s/r2v_0264_azure_wyvern_bright_floating_ga/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-0264-2-full",
+    "bytes": 636350,
+    "source": "Ref2Vid/30s/r2v_0264_azure_wyvern_bright_floating_ga/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-0412-1",
+    "bytes": 33969,
+    "source": "Ref2Vid/30s/r2v_0412_highland_warden_ri_alpine_lake_basin/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-0412-1-full",
+    "bytes": 260418,
+    "source": "Ref2Vid/30s/r2v_0412_highland_warden_ri_alpine_lake_basin/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-0412-2",
+    "bytes": 116391,
+    "source": "Ref2Vid/30s/r2v_0412_highland_warden_ri_alpine_lake_basin/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-0412-2-full",
+    "bytes": 882944,
+    "source": "Ref2Vid/30s/r2v_0412_highland_warden_ri_alpine_lake_basin/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-0679-1",
+    "bytes": 31320,
+    "source": "Ref2Vid/30s/r2v_0679_copper_automaton_s_giant_sequoia_clea/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-0679-1-full",
+    "bytes": 210958,
+    "source": "Ref2Vid/30s/r2v_0679_copper_automaton_s_giant_sequoia_clea/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-0679-2",
+    "bytes": 84408,
+    "source": "Ref2Vid/30s/r2v_0679_copper_automaton_s_giant_sequoia_clea/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-0679-2-full",
+    "bytes": 647318,
+    "source": "Ref2Vid/30s/r2v_0679_copper_automaton_s_giant_sequoia_clea/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-0757-1",
+    "bytes": 23488,
+    "source": "Ref2Vid/30s/r2v_0757_coastal_cartograph_flowering_coastal/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-0757-1-full",
+    "bytes": 160312,
+    "source": "Ref2Vid/30s/r2v_0757_coastal_cartograph_flowering_coastal/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-0757-2",
+    "bytes": 103534,
+    "source": "Ref2Vid/30s/r2v_0757_coastal_cartograph_flowering_coastal/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-0757-2-full",
+    "bytes": 723012,
+    "source": "Ref2Vid/30s/r2v_0757_coastal_cartograph_flowering_coastal/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-0825-1",
+    "bytes": 46116,
+    "source": "Ref2Vid/30s/r2v_0825_desert_scout_ridin_crystal_desert_sky/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-0825-1-full",
+    "bytes": 315374,
+    "source": "Ref2Vid/30s/r2v_0825_desert_scout_ridin_crystal_desert_sky/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-0825-2",
+    "bytes": 68371,
+    "source": "Ref2Vid/30s/r2v_0825_desert_scout_ridin_crystal_desert_sky/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-0825-2-full",
+    "bytes": 513534,
+    "source": "Ref2Vid/30s/r2v_0825_desert_scout_ridin_crystal_desert_sky/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-0988-1",
+    "bytes": 54077,
+    "source": "Ref2Vid/30s/r2v_0988_sky_ranger_riding_bright_floating_ga/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-0988-1-full",
+    "bytes": 364745,
+    "source": "Ref2Vid/30s/r2v_0988_sky_ranger_riding_bright_floating_ga/input_reference_1.jpg"
+  },
+  {
+    "asset": "ref2vid-0988-2",
+    "bytes": 73547,
+    "source": "Ref2Vid/30s/r2v_0988_sky_ranger_riding_bright_floating_ga/input_reference_2.jpg"
+  },
+  {
+    "asset": "ref2vid-0988-2-full",
+    "bytes": 530721,
+    "source": "Ref2Vid/30s/r2v_0988_sky_ranger_riding_bright_floating_ga/input_reference_2.jpg"
+  },
+  {
+    "asset": "refevent-01-start",
+    "bytes": 88460,
+    "source": "RefEvent/8s/case1/input_first_image.jpg"
+  },
+  {
+    "asset": "refevent-01-start-full",
+    "bytes": 227863,
+    "source": "RefEvent/8s/case1/input_first_image.jpg"
+  },
+  {
+    "asset": "refevent-03-start",
+    "bytes": 71340,
+    "source": "RefEvent/8s/case3/input_first_image.jpg"
+  },
+  {
+    "asset": "refevent-03-start-full",
+    "bytes": 185399,
+    "source": "RefEvent/8s/case3/input_first_image.jpg"
+  },
+  {
+    "asset": "refevent-06-start",
+    "bytes": 78537,
+    "source": "RefEvent/8s/case6/input_first_image.jpg"
+  },
+  {
+    "asset": "refevent-06-start-full",
+    "bytes": 199605,
+    "source": "RefEvent/8s/case6/input_first_image.jpg"
+  },
+  {
+    "asset": "refevent-07-start",
+    "bytes": 79346,
+    "source": "RefEvent/8s/case7/input_first_image.jpg"
+  },
+  {
+    "asset": "refevent-07-start-full",
+    "bytes": 217239,
+    "source": "RefEvent/8s/case7/input_first_image.jpg"
+  },
+  {
+    "asset": "refevent-09-start",
+    "bytes": 85922,
+    "source": "RefEvent/8s/case9/input_first_image.jpg"
+  },
+  {
+    "asset": "refevent-09-start-full",
+    "bytes": 222497,
+    "source": "RefEvent/8s/case9/input_first_image.jpg"
+  },
+  {
+    "asset": "refevent-01-reference",
+    "bytes": 47433,
+    "source": "RefEvent/8s/case1/input_reference_1.jpg"
+  },
+  {
+    "asset": "refevent-01-reference-full",
+    "bytes": 378059,
+    "source": "RefEvent/8s/case1/input_reference_1.jpg"
+  },
+  {
+    "asset": "refevent-03-reference",
+    "bytes": 33037,
+    "source": "RefEvent/8s/case3/input_reference_1.jpg"
+  },
+  {
+    "asset": "refevent-03-reference-full",
+    "bytes": 259417,
+    "source": "RefEvent/8s/case3/input_reference_1.jpg"
+  },
+  {
+    "asset": "refevent-06-reference",
+    "bytes": 27909,
+    "source": "RefEvent/8s/case6/input_reference_1.jpg"
+  },
+  {
+    "asset": "refevent-06-reference-full",
+    "bytes": 240055,
+    "source": "RefEvent/8s/case6/input_reference_1.jpg"
+  },
+  {
+    "asset": "refevent-07-reference",
+    "bytes": 34231,
+    "source": "RefEvent/8s/case7/input_reference_1.jpg"
+  },
+  {
+    "asset": "refevent-07-reference-full",
+    "bytes": 210300,
+    "source": "RefEvent/8s/case7/input_reference_1.jpg"
+  },
+  {
+    "asset": "refevent-09-reference",
+    "bytes": 38088,
+    "source": "RefEvent/8s/case9/input_reference_1.jpg"
+  },
+  {
+    "asset": "refevent-09-reference-full",
+    "bytes": 332577,
+    "source": "RefEvent/8s/case9/input_reference_1.jpg"
+  },
+  {
+    "asset": "refevent-new-01-reference",
+    "bytes": 50280,
+    "source": "RefEvent/new case/input_reference_1.jpg"
+  },
+  {
+    "asset": "refevent-new-01-reference-full",
+    "bytes": 212405,
+    "source": "RefEvent/new case/input_reference_1.jpg"
+  },
+  {
+    "asset": "refevent-new-02-reference",
+    "bytes": 58558,
+    "source": "RefEvent/new case/input_reference_2.jpg",
+    "provenance": "reference image recreated from output video frames"
+  },
+  {
+    "asset": "refevent-new-02-reference-full",
+    "bytes": 404840,
+    "source": "RefEvent/new case/input_reference_2.jpg",
+    "provenance": "reference image recreated from output video frames"
+  },
+  {
+    "asset": "refevent-new-03-reference",
+    "bytes": 89639,
+    "source": "RefEvent/new case/input_reference_3.jpg"
+  },
+  {
+    "asset": "refevent-new-03-reference-full",
+    "bytes": 405461,
+    "source": "RefEvent/new case/input_reference_3.jpg"
+  },
+  {
+    "asset": "refevent-new-01-start",
+    "bytes": 68728,
+    "source": "RefEvent/edit/i_key_restore/ref_video_1_ez_i_restored.mp4",
+    "frame": 0
+  },
+  {
+    "asset": "refevent-new-01-start-full",
+    "bytes": 166923,
+    "source": "RefEvent/edit/i_key_restore/ref_video_1_ez_i_restored.mp4",
+    "frame": 0
+  },
+  {
+    "asset": "refevent-new-02-start",
+    "bytes": 84824,
+    "source": "RefEvent/edit/i_key_restore/ref_video_2_ez_i_restored.mp4",
+    "frame": 0
+  },
+  {
+    "asset": "refevent-new-02-start-full",
+    "bytes": 210275,
+    "source": "RefEvent/edit/i_key_restore/ref_video_2_ez_i_restored.mp4",
+    "frame": 0
+  },
+  {
+    "asset": "refevent-new-03-start",
+    "bytes": 65443,
+    "source": "RefEvent/edit/i_key_restore/ref_video_3_ez_i_restored.mp4",
+    "frame": 0
+  },
+  {
+    "asset": "refevent-new-03-start-full",
+    "bytes": 150862,
+    "source": "RefEvent/edit/i_key_restore/ref_video_3_ez_i_restored.mp4",
+    "frame": 0
   }
 ]
